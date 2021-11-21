@@ -1,0 +1,2474 @@
+{
+	"info": {
+		"_postman_id": "ca3599bc-7396-45ee-b05e-7422f7175e12",
+		"name": "CalSAWS System Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Office API_SIT3",
+			"item": [
+				{
+					"name": "Office API_SIT3",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": " Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 ",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-id",
+								"value": " undefined",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": " Bearer anonymous",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://sit3-app.sit.benefitscaldev.com/dataexchangeproxy/Office?zipCode=92301&cityName=Spreckels&countyCode=36&programCodes=GR&state=CA&line1Addr=PO%20Box%201&ltcInd=false",
+							"protocol": "https",
+							"host": [
+								"sit3-app",
+								"sit",
+								"benefitscaldev",
+								"com"
+							],
+							"path": [
+								"dataexchangeproxy",
+								"Office"
+							],
+							"query": [
+								{
+									"key": "zipCode",
+									"value": "92301"
+								},
+								{
+									"key": "cityName",
+									"value": "Spreckels"
+								},
+								{
+									"key": "countyCode",
+									"value": "36"
+								},
+								{
+									"key": "programCodes",
+									"value": "GR"
+								},
+								{
+									"key": "state",
+									"value": "CA"
+								},
+								{
+									"key": "line1Addr",
+									"value": "PO%20Box%201"
+								},
+								{
+									"key": "ltcInd",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Office API_PRD",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": " Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 ",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-id",
+								"value": " undefined",
+								"type": "text"
+							},
+							{
+								"key": "x-auth-token",
+								"value": " Bearer anonymous",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://prdstg-app.prdstg.benefitscaldev.com/dataexchangeproxy/Office?zipCode=93203&cityName=Arvin&countyCode=15&programCodes=GR&state=CA&line1Addr=PO%20Box%201&ltcInd=false",
+							"protocol": "https",
+							"host": [
+								"prdstg-app",
+								"prdstg",
+								"benefitscaldev",
+								"com"
+							],
+							"path": [
+								"dataexchangeproxy",
+								"Office"
+							],
+							"query": [
+								{
+									"key": "zipCode",
+									"value": "93203"
+								},
+								{
+									"key": "cityName",
+									"value": "Arvin"
+								},
+								{
+									"key": "countyCode",
+									"value": "15"
+								},
+								{
+									"key": "programCodes",
+									"value": "GR"
+								},
+								{
+									"key": "state",
+									"value": "CA"
+								},
+								{
+									"key": "line1Addr",
+									"value": "PO%20Box%201"
+								},
+								{
+									"key": "ltcInd",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Case Details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer tD37to9Bw4URawX6bdoN6oYRzvM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/case?guID=f106eeb2-91a6-40a0-8307-de491b137f5c",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"case"
+					],
+					"query": [
+						{
+							"key": "guID",
+							"value": "f106eeb2-91a6-40a0-8307-de491b137f5c"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "App Transfer",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer zINZelsqEDBsOE0MdVhBS7kyFYc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"countyCode\": \"19\",\r\n    \"appNumber\": \"91171209\",\r\n    \"signDate\": \"2021-11-10\",\r\n    \"dsnapInd\": false,\r\n    \"officeIdentif\": \"ZF\",\r\n    \"loginInfoId\": \"f01ac545-10ff-4d32-b189-54e886daaea4\",\r\n    \"cmspInd\": false,\r\n    \"renewalInd\": false,\r\n    \"userAgency\": \"BenefitsCal CBO Test US255BenefitsCal CBO Test USBenefitsCal CBO Test USBenefitsCal CBO Test USBenefitsCal CBO Test USBenefitsCal CBO Test USBenefitsCal CBO Test USBenefitsCal CBO Test USBenefitsCal CBO Test USBenefitsCal CBO Test USBenefitsCal CBO Test U123\",\r\n    \"initialApplicationInd\": true,\r\n    \"otherArrangeDisbInd\": false,\r\n    \"primaryApplicant\": {\r\n        \"program\": [\r\n            \"MC\",\r\n            \"FS\",\r\n            \"CW\"\r\n        ],\r\n        \"id\": 1,\r\n        \"primaryApplicantInd\": true,\r\n        \"ssn\": \"456789876\",\r\n        \"firstName\": \"James\",\r\n        \"lastName\": \"Doe\",\r\n        \"dob\": \"1990-01-01\",\r\n        \"homelessStatus\": false,\r\n        \"pregnantInd\": false,\r\n        \"houseHoldHeadInd\": true,\r\n        \"sameAddressAsPrimaryInd\": true,\r\n        \"emailAddr\": \"CBOA2ndnov@mailinator.com\",\r\n        \"writtenLangCode\": \"03\",\r\n        \"spokenLangCode\": \"03\",\r\n        \"addressess\": [\r\n            {\r\n                \"addrType\": \"PH\",\r\n                \"streetAddr1\": \"7360 W Sunset Blvd\",\r\n                \"cityName\": \"Los Angeles\",\r\n                \"zipCode\": \"90046\",\r\n                \"state\": \"CA\"\r\n            }\r\n        ],\r\n        \"phoneNumbers\": [\r\n            {\r\n                \"type\": \"HO\",\r\n                \"number\": \"2345678998\"\r\n            }\r\n        ],\r\n        \"citizenship\": {\r\n            \"usCitzOrNationalInd\": true\r\n        }\r\n    },\r\n    \"otherApplicants\": [\r\n        {\r\n            \"program\": [\r\n                \"MC\",\r\n                \"FS\",\r\n                \"CW\"\r\n            ],\r\n            \"id\": 1636539107,\r\n            \"primaryApplicantInd\": false,\r\n            \"firstName\": \"Sam\",\r\n            \"lastName\": \"Doe\",\r\n            \"middleName\": \" \",\r\n            \"dob\": \"2010-01-01\",\r\n            \"householdStatus\": \"IH\",\r\n            \"tribe\": \" \",\r\n            \"homelessStatus\": false,\r\n            \"pregnantInd\": false,\r\n            \"sameAddressAsPrimaryInd\": true,\r\n            \"otherEthnicText\": \" \",\r\n            \"pdjIdentif\": \"AD78765\",\r\n            \"addressess\": [\r\n                {\r\n                    \"addrType\": \"PH\",\r\n                    \"streetAddr1\": \"7360 W Sunset Blvd\",\r\n                    \"cityName\": \"Los Angeles\",\r\n                    \"zipCode\": \"90046\",\r\n                    \"state\": \"CA\"\r\n                }\r\n            ],\r\n            \"citizenship\": {\r\n                \"usCitzOrNationalInd\": true\r\n            },\r\n            \"livingArrangements\": [\r\n                {\r\n                    \"endDate\": \"2022-01-01\",\r\n                    \"shelterName\": \"Facility\"\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"relationships\": [\r\n        {\r\n            \"persID\": 1,\r\n            \"pers2ID\": 1636539107,\r\n            \"typeCode\": \"PB\"\r\n        }\r\n    ],\r\n    \"expediteInd\": false\r\n}"
+				},
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/application?countyCode=19",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"application"
+					],
+					"query": [
+						{
+							"key": "countyCode",
+							"value": "19"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[BCAL]Application Status Update Copy 2",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer JgxzGIbZxv6myDvpFeX-da7ghMw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"appNumber\" : \"111444\",\r\n    \"caseNumber\" : \"\",\r\n    \"appStatus\" : \"DT\"\r\n}"
+				},
+				"url": {
+					"raw": "https://sit1-app.sit.benefitscaldev.com/appregstatus/putApplicationStatusUpdate",
+					"protocol": "https",
+					"host": [
+						"sit1-app",
+						"sit",
+						"benefitscaldev",
+						"com"
+					],
+					"path": [
+						"appregstatus",
+						"putApplicationStatusUpdate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Image Store",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer FwSaA9YX5kI8grdvKY-04cLtLoo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "info",
+							"value": "{\n\t\"keys\": {\n\t\t\"drawer\": \"Los Angeles Case\",\n\t\t\"field1\": \"809557624\",\n\t\t\"field2\": \"B1RSA82\",\n\t\t\"field3\": \"Case Name\",\n\t\t\"field5\": \"IMG 672\",\n\t\t\"documentType\": \"Self-Service-Other\",\n\t\t\"customKeys\": [\n\t\t\t{\n\t\t\t\t\"name\": \"Applicable Date\",\n\t\t\t\t\"value\": \"04/02/2021\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Received Date\",\n\t\t\t\t\"value\": \"04/02/2021\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Document Type\",\n\t\t\t\t\"value\": \"Self-Service - Other\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"County Code\",\n\t\t\t\t\"value\": \"19\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Capture Information\",\n\t\t\t\t\"value\": \"Portal\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"name\": \"Document Scope\",\n\t\t\t\t\"value\": \"case\"\n\t\t\t}\n\t\t]\n\t},\n\t\"notes\": \"User Selected values in the Portal\"\n}\n \n\n \n  \n ",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/vakorivi/Desktop/Capture.PNG"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://sys3.api-test.calsaws.net/sit/v1/imaging-service/outbound/image/store",
+					"protocol": "https",
+					"host": [
+						"sys3",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"sit",
+						"v1",
+						"imaging-service",
+						"outbound",
+						"image",
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Contact Details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer LVOoe7UIOTmKhMJQgEMvmHRgCrM",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/customer/customerContactDetails?guID=b554fd62-8412-4e16-b994-df190af71c5e",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"customer",
+						"customerContactDetails"
+					],
+					"query": [
+						{
+							"key": "guID",
+							"value": "b554fd62-8412-4e16-b994-df190af71c5e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Contact Details Copy",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer O5KsdbmmhIlgCR9tG0djYshpwyQ",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"guid\":\"78909809809\",\r\n    \"phoneNumbers\": [\r\n        {\r\n            \"phoneNumbers\": {\r\n                \"number\": \"221-891-3972\",\r\n                \"type\": \"ME\"\r\n            },\r\n            \"paperlessTextConsent\": \"O1\"\r\n        }\r\n    ],\r\n    \"emailOptInStatus\": true,\r\n    \"email\": \"test@test.com\"\r\n}"
+				},
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/customer/customerContactDetails/Update",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"customer",
+						"customerContactDetails",
+						"Update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Office Mapping",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer LVOoe7UIOTmKhMJQgEMvmHRgCrM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/Office?zipCode=90012&programCodes=FS,CW&countyCode=19&cityName=Los%20Angeles&state=CA&line1Addr=Street%201",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"Office"
+					],
+					"query": [
+						{
+							"key": "zipCode",
+							"value": "90012"
+						},
+						{
+							"key": "programCodes",
+							"value": "FS,CW"
+						},
+						{
+							"key": "countyCode",
+							"value": "19"
+						},
+						{
+							"key": "cityName",
+							"value": "Los%20Angeles"
+						},
+						{
+							"key": "state",
+							"value": "CA"
+						},
+						{
+							"key": "line1Addr",
+							"value": "Street%201"
+						},
+						{
+							"key": "line2Addr",
+							"value": "1203",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Case Linking by SSN",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer Tq3qIvyUgGjDwnpa5syM8yLNXkY",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"guid\": \"894dccb7-fbf7-4ee3-b846-69077004ef11\",\r\n  \"dOB\": {\r\n    \"dOB\": \"1992-11-21\"\r\n  },\r\n  \"ssn\": {\r\n    \"ssnLast4Digits\": \"9152\"\r\n  },\r\n  \"phNumOrZip\": {\r\n      \"zipCode\":\"92392\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/caseLink/bySSN",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"caseLink",
+						"bySSN"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Case Linking by SSN_CF37",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer AvA4QlnUAeo3vtJbvBXXrakO3-E",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"guid\": \"a7a3a8dd-ea57-4b7c-ba36-c022bd37ad4e\",\r\n  \"dOB\": {\r\n    \"dOB\": \"1989-09-14\"\r\n  },\r\n  \"ssn\": {\r\n    \"ssnLast4Digits\": \"6484\"\r\n  },\r\n  \"phNumOrZip\": {\r\n      \"zipCode\":\"91766\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/caseLink/bySSN",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"caseLink",
+						"bySSN"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Case Linking by SSN_smoke_SIT",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer YvJHohdtMgOki8CQf9iH9mWr9F4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"guid\": \"a7a3a8dd-ea57-4b7c-ba36-c022bd37ad4e\",\r\n  \"dOB\": {\r\n    \"dOB\": \"1989-09-14\"\r\n  },\r\n  \"ssn\": {\r\n    \"ssnLast4Digits\": \"6484\"\r\n  },\r\n  \"phNumOrZip\": {\r\n      \"zipCode\":\"91766\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/caseLink/bySSN",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"caseLink",
+						"bySSN"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Case Linking by SSN_smoke_UAT",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer qpeHGJe39bkuuPpJbq2nQoTu0ic",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"guid\": \"e58978d7-2343-4459-a43c-aeb80c664537\",\r\n  \"dOB\": {\r\n    \"dOB\": \"1937-01-15\"\r\n  },\r\n  \"ssn\": {\r\n    \"ssnLast4Digits\": \"9290\"\r\n  },\r\n  \"phNumOrZip\": {\r\n      \"zipCode\":\"91606\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/caseLink/bySSN",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"caseLink",
+						"bySSN"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Case Linking by EBT",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer PataYwjKSNokFs8bl5sBQz6EfVQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"guid\": \"f5c82990-43d5-4bf7-b0b2-234be274f60e\",\r\n  \"ebtCardNum\": {\r\n    \"ebtCardNumIdentif\": \"5077190003272982\"\r\n  },\r\n  \"dOB\": {\r\n    \"dOB\": \"1989-11-20\"\r\n  },\r\n  \"phNumOrZipOrSSN\": {\r\n      \"zipCode\": \"90650\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/caseLink/byEBTNumber",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"caseLink",
+						"byEBTNumber"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Case Linking by Case",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer SuzG5l8cmxOHgPyjoiOdYIxTihQ",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"guid\": \"e06c08b1-3796-4ad1-8650-2a999a4cf9ee\",\r\n  \"caseNumber\": {\r\n    \"countyCode\": \"19\",\r\n    \"caseNumber\": \"K200381\"\r\n  },\r\n  \"dOB\": {\r\n    \"dOB\": \"2000-01-01\"\r\n  },\r\n  \"phNumOrZipOrSSN\": {\r\n      \"zipCode\" : \"90012\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/caseLink/byCaseNumber",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"caseLink",
+						"byCaseNumber"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Notices",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer SM94jMobt0YiuZRLWmLiAqA303c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/Notices?guID=420a2bc9-b2a5-4890-9623-571410e338d1",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"Notices"
+					],
+					"query": [
+						{
+							"key": "guID",
+							"value": "420a2bc9-b2a5-4890-9623-571410e338d1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Notice Detail/Retrieve PDF",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer ABodUa2KqB6mkMsLG6EB1enb8aQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/Notices/MTkvMjAyMS83LzE5LzE5X0NTRjE2MF9FTl8yMDIxMDcxOTE2NDcyNjYwM19LMjAwMTczMDAwMDA2MjAyMjQwOTI4ODA5MTdfNTU0NDY3NDYzLnBkZg==?caseNumber=K200173",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"Notices",
+						"MTkvMjAyMS83LzE5LzE5X0NTRjE2MF9FTl8yMDIxMDcxOTE2NDcyNjYwM19LMjAwMTczMDAwMDA2MjAyMjQwOTI4ODA5MTdfNTU0NDY3NDYzLnBkZg=="
+					],
+					"query": [
+						{
+							"key": "caseNumber",
+							"value": "K200173"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Appointments By Person",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer MjLBnbEPXOl_wEJb8Cv5DtGEx3w",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "bearer FibwyCmPnxwissKj5-CipiOzvx4",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://sys.api-test.calsaws.net/v1/appointments/byPerson/4001252061?startDate=2021-10-04",
+					"protocol": "https",
+					"host": [
+						"sys",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"v1",
+						"appointments",
+						"byPerson",
+						"4001252061"
+					],
+					"query": [
+						{
+							"key": "countyCode",
+							"value": "19",
+							"disabled": true
+						},
+						{
+							"key": "startDate",
+							"value": "2021-10-04"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel Appointment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "vtg9kNaS-wuT4kgjRomU7U3ES-c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer jjttbfhhDWWXI_UzMhjIpubtvb4",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "x-auth-token",
+						"value": "Bearer OCzTSYM-JPrYQ-sy-en70sVwTfQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://sys.api-test.calsaws.net/v1/appointments/appointment/2000532928?newStatus=Cancelled&statRsn=Client Initiated&countyCode=19",
+					"protocol": "https",
+					"host": [
+						"sys",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"v1",
+						"appointments",
+						"appointment",
+						"2000532928"
+					],
+					"query": [
+						{
+							"key": "newStatus",
+							"value": "Cancelled"
+						},
+						{
+							"key": "statRsn",
+							"value": "Client Initiated"
+						},
+						{
+							"key": "countyCode",
+							"value": "19"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Appointments By Person Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer QZdTyrcnQ8lajDUpxwFlN7x4Ig0",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "x-auth-token",
+						"value": "Bearer FibwyCmPnxwissKj5-CipiOzvx4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://sit1-app.sit.benefitscaldev.com/appointments/person/4001250917",
+					"protocol": "https",
+					"host": [
+						"sit1-app",
+						"sit",
+						"benefitscaldev",
+						"com"
+					],
+					"path": [
+						"appointments",
+						"person",
+						"4001250917"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create CBO Task",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer 8tM5jHtfZBLeK2O6vqrBfFXVJlI",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"createCboAcct\": {\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Smith\",\r\n    \"email\": \"johnSmith@yyy.com\",\r\n    \"address1\": \"Some place 1\",\r\n    \"address2\": \"Some place 2\",\r\n    \"phone\": {\r\n      \"number\": \"310-775-2343\"\r\n    },\r\n    \"zip\": \"65679\",\r\n    \"countyCode\": \"19\",\r\n    \"organization\": \"string\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/tasks/cbo-account",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"tasks",
+						"cbo-account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Report  A Change",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer VxdSxfHqxun-dY99SkhzParAuqs",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"countyCode\": \"19\",\r\n  \"caseNumber\": \"B1K0D07\",\r\n  \"changeReportSummary\": \"State Hearing Decision\"\r\n}"
+				},
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/ChangeReport",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"ChangeReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Schedule Appointment Task",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer jbg_WVMCuzmZUpgZS-Itux7GcV4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"guid\": \"90f6d8f5-4496-4408-a5c5-5ea6d6945b58\",\r\n\"countyCode\": \"19\",\r\n\"caseNumber\": \"K200175\",\r\n\"vitaInd\": true,\r\n\"apptType\": \"GA\",\r\n\"longDescr\": \"appointment scheduled for morning time -- this is a test\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/appointments/appointmentsTask",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"appointments",
+						"appointmentsTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Replace EBT or BIC Card",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer LzBDKDU7jktoEQMVY4eRUkeMieg",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"GUID\": \"78909809809\",\r\n  \"countyCode\": \"19\",\r\n  \"caseNumber\": \"L000100\",\r\n  \"longDescr\": \"string\"\r\n}"
+				},
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/EBT/EBTTask",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"EBT",
+						"EBTTask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account Sync API",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer PqeBk1sHrWcqzJcvCJc0G37dC_k",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"loginInfoId\": \"9542\",\r\n  \"guId\": \"980\",\r\n  \"sourceSystem\": \"C4Y\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/Account/AccountSync",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"Account",
+						"AccountSync"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CF 37",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer wnssbcqGokGRhK5z6S51TJm43rk",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"caseNumber\": \"B242943\",\r\n  \"applicationNumber\": \"114597\",\r\n  \"form\": {\r\n    \"cf37\": {\r\n      \"baseDocumentType\": {\r\n        \"countyCode\": \"19\",\r\n        \"caseNumber\": \"B242943\",\r\n        \"caseName\": \"LORINDA RODERICK\",\r\n        \"barCode\": \"0000000320000307\",\r\n        \"workerName\": \"Shenita Eggleston \",\r\n        \"workerPhone\": {\r\n          \"number\": \"798-373-1686\"\r\n        },\r\n        \"mailingAddress\": {\r\n          \"addressName\": \"LORINDA RODERICK\",\r\n          \"streetName\": \"727 Cedar Street\",\r\n          \"aptORsuitenumber\": \"125\",\r\n          \"city\": \"Garberville\",\r\n          \"state\": \"CA\",\r\n          \"zipcode\": \"95542\"\r\n        },\r\n        \"mailbackAddressOffice\": {\r\n          \"addressName\": \"LORINDA RODERICK\",\r\n          \"streetName\": \"727 Cedar Street\",\r\n          \"aptORsuitenumber\": \"125\",\r\n          \"city\": \"Garberville\",\r\n          \"state\": \"CA\",\r\n          \"zipcode\": \"95542\"\r\n        },\r\n        \"program\": [\r\n          \"CF\"\r\n        ],\r\n        \"individual\": [\r\n          {\r\n            \"personId\": \"1633537756\",\r\n            \"name\": {\r\n              \"firstName\": \"Chris\",\r\n              \"lastName\": \"Doe\",\r\n              \"middleInitial\": \"Duo\"\r\n            },\r\n            \"cin\": \"024752029\",\r\n            \"age\": 0,\r\n            \"newIndividual\": false\r\n          },\r\n          {\r\n            \"personId\": \"1633537702\",\r\n            \"name\": {\r\n              \"firstName\": \"Robert\",\r\n              \"lastName\": \"Doe\",\r\n              \"middleInitial\": \"Duo\"\r\n            },\r\n            \"cin\": \"677735290\",\r\n            \"age\": 31,\r\n            \"newIndividual\": false\r\n          },\r\n          {\r\n            \"personId\": \"3\",\r\n            \"name\": {\r\n              \"firstName\": \"DOMINGO\",\r\n              \"lastName\": \"RODERICK\"\r\n            },\r\n            \"cin\": \"35855890G\",\r\n            \"age\": 0,\r\n            \"gender\": \"FE\",\r\n            \"newIndividual\": false\r\n          },\r\n          {\r\n            \"personId\": \"2\",\r\n            \"name\": {\r\n              \"firstName\": \"DESTINY\",\r\n              \"lastName\": \"RODERICK\"\r\n            },\r\n            \"cin\": \"70976060G\",\r\n            \"age\": 4,\r\n            \"gender\": \"MA\",\r\n            \"newIndividual\": false\r\n          },\r\n          {\r\n            \"personId\": \"1\",\r\n            \"name\": {\r\n              \"firstName\": \"LORINDA\",\r\n              \"lastName\": \"RODERICK\"\r\n            },\r\n            \"cin\": \"79637723G\",\r\n            \"age\": 32,\r\n            \"gender\": \"FE\",\r\n            \"newIndividual\": false\r\n          }\r\n        ],\r\n        \"caseIndividuals\": [\r\n          {\r\n            \"personId\": \"1633537756\",\r\n            \"name\": {\r\n              \"firstName\": \"Chris\",\r\n              \"lastName\": \"Doe\",\r\n              \"middleInitial\": \"Duo\"\r\n            },\r\n            \"cin\": \"024752029\",\r\n            \"age\": 0,\r\n            \"newIndividual\": false\r\n          },\r\n          {\r\n            \"personId\": \"1633537702\",\r\n            \"name\": {\r\n              \"firstName\": \"Robert\",\r\n              \"lastName\": \"Doe\",\r\n              \"middleInitial\": \"Duo\"\r\n            },\r\n            \"cin\": \"677735290\",\r\n            \"age\": 31,\r\n            \"newIndividual\": false\r\n          },\r\n          {\r\n            \"personId\": \"3\",\r\n            \"name\": {\r\n              \"firstName\": \"DOMINGO\",\r\n              \"lastName\": \"RODERICK\"\r\n            },\r\n            \"cin\": \"35855890G\",\r\n            \"age\": 0,\r\n            \"gender\": \"FE\",\r\n            \"newIndividual\": false\r\n          },\r\n          {\r\n            \"personId\": \"2\",\r\n            \"name\": {\r\n              \"firstName\": \"DESTINY\",\r\n              \"lastName\": \"RODERICK\"\r\n            },\r\n            \"cin\": \"70976060G\",\r\n            \"age\": 4,\r\n            \"gender\": \"MA\",\r\n            \"newIndividual\": false\r\n          },\r\n          {\r\n            \"personId\": \"1\",\r\n            \"name\": {\r\n              \"firstName\": \"LORINDA\",\r\n              \"lastName\": \"RODERICK\"\r\n            },\r\n            \"cin\": \"79637723G\",\r\n            \"age\": 32,\r\n            \"gender\": \"FE\",\r\n            \"newIndividual\": false\r\n          }\r\n        ]\r\n      },\r\n      \"mailAddress\": {\r\n        \"addressLine\": \"727 Cedar Street\",\r\n        \"city\": \"Garberville\",\r\n        \"state\": \"CA\",\r\n        \"zipcode\": \"95542\",\r\n        \"apt\": \"125\"\r\n      },\r\n      \"contactAuthorization\": {\r\n        \"question\": {\r\n          \"yesorNo\": \"N\"\r\n        },\r\n        \"homePhone\": \"5434567899\",\r\n        \"cellPhone\": \"2345678987\",\r\n        \"checkBoxForText\": false,\r\n        \"workAlternateMessagePhone\": \"8765434567\",\r\n        \"emailAddress\": \"sitsmoketestall@mailinator.com\"\r\n      },\r\n      \"question1\": {\r\n        \"question\": {\r\n          \"yesorNo\": \"Y\"\r\n        },\r\n        \"householdInformationRecords\": [\r\n          {\r\n            \"regularlyPurchase\": \"Y\",\r\n            \"name\": \"024752029\",\r\n            \"dateOfMove\": \"2021-01-01\",\r\n            \"dateOfBirth\": \"2021-01-01\",\r\n            \"relationship\": \"Child\",\r\n            \"moveType\": \"In\"\r\n          },\r\n          {\r\n            \"regularlyPurchase\": \"Y\",\r\n            \"name\": \"677735290\",\r\n            \"dateOfMove\": \"2021-10-06\",\r\n            \"dateOfBirth\": \"1990-01-01\",\r\n            \"relationship\": \"Cousin (1st or 1st once removed)\",\r\n            \"moveType\": \"In\"\r\n          },\r\n          {\r\n            \"regularlyPurchase\": \"N\",\r\n            \"name\": \"35855890G\",\r\n            \"dateOfBirth\": \"2020-12-16\",\r\n            \"relationship\": \"Common Law\",\r\n            \"moveType\": \"Out\"\r\n          },\r\n          {\r\n            \"regularlyPurchase\": \"N\",\r\n            \"name\": \"70976060G\",\r\n            \"dateOfBirth\": \"2017-01-11\",\r\n            \"relationship\": \"Child\",\r\n            \"moveType\": \"Out\"\r\n          }\r\n        ]\r\n      },\r\n      \"question2Rep\": {\r\n        \"question\": {\r\n          \"yesorNo\": \"Y\"\r\n        },\r\n        \"contactType\": {\r\n          \"name\": \"Sam Doe\",\r\n          \"phoneNumber\": \"1234567898\"\r\n        }\r\n      },\r\n      \"question2Contact\": {\r\n        \"question\": {\r\n          \"yesorNo\": \"Y\"\r\n        },\r\n        \"contactType\": {\r\n          \"name\": \"James Doe\",\r\n          \"phoneNumber\": \"2345678865\"\r\n        },\r\n        \"contactAddress\": {\r\n          \"addressLine\": \"500 S J St\",\r\n          \"city\": \"Imperial\",\r\n          \"state\": \"CA\",\r\n          \"zipcode\": \"92251\",\r\n          \"apt\": \"125\"\r\n        }\r\n      },\r\n      \"question3\": {\r\n        \"question\": {\r\n          \"yesorNo\": \"Y\"\r\n        },\r\n        \"newHomeAddress\": {\r\n          \"addressLine\": \"500 S J St\",\r\n          \"city\": \"Imperial\",\r\n          \"state\": \"CA\",\r\n          \"zipcode\": \"92251\",\r\n          \"apt\": \"125\"\r\n        },\r\n        \"newMailingAddress\": {\r\n          \"addressLine\": \"727 Cedar Street\",\r\n          \"city\": \"Garberville\",\r\n          \"state\": \"CA\",\r\n          \"zipcode\": \"95542\",\r\n          \"apt\": \"125\"\r\n        }\r\n      },\r\n      \"question4\": {\r\n        \"rentOrMortgageAmt\": 500.0,\r\n        \"paidSeparatelyAmt\": 70.0,\r\n        \"phoneCost\": true,\r\n        \"trashCost\": true,\r\n        \"waterCost\": true,\r\n        \"gasOrElectricCost\": true,\r\n        \"otherCost\": true\r\n      },\r\n      \"question5\": {\r\n        \"question\": {\r\n          \"yesorNo\": \"N\"\r\n        },\r\n        \"payShelterCosts\": \"Y\"\r\n      },\r\n      \"question6\": {\r\n        \"question\": {\r\n          \"yesorNo\": \"Y\"\r\n        },\r\n        \"newSchlInformation\": [\r\n          {\r\n            \"actualName\": \"677735290\",\r\n            \"actualSchoolName\": \"School of LA\",\r\n            \"actualNumberOfUnits\": \"10\",\r\n            \"isPersonWorkingActual\": \"Y\",\r\n            \"actualwrkPerHr\": \"10\",\r\n            \"actualEnrolledStatus\": \"HT\"\r\n          }\r\n        ]\r\n      },\r\n      \"question7\": {\r\n        \"question\": {\r\n          \"yesorNo\": \"Y\"\r\n        },\r\n        \"incomeRecords\": [\r\n          {\r\n            \"nameOfWhoGotIncome\": \"677735290\",\r\n            \"employerName\": \"Self\",\r\n            \"selfEmployed\": true,\r\n            \"howOftenPaid\": \"monthly\",\r\n            \"grossAmount1\": 100.0,\r\n            \"grossAmount2\": 0.0,\r\n            \"grossAmount3\": 0.0,\r\n            \"grossAmount4\": 0.0,\r\n            \"grossAmount5\": 0.0,\r\n            \"grossAmount6\": 0.0,\r\n            \"hoursWorkPerMonth\": 200\r\n          }\r\n        ]\r\n      },\r\n      \"question7A\": {\r\n        \"answer\": \"N\"\r\n      },\r\n      \"question8\": {\r\n        \"question\": {\r\n          \"yesorNo\": \"Y\"\r\n        },\r\n        \"unearnedIncomeRecords\": [\r\n          {\r\n            \"name\": \"677735290\",\r\n            \"oneTimeOrMonthly\": \"monthly\",\r\n            \"incomeSource\": \"Child or Spousal Support\",\r\n            \"howMuch\": 500.0\r\n          },\r\n          {\r\n            \"name\": \"79637723G\",\r\n            \"oneTimeOrMonthly\": \"monthly\",\r\n            \"incomeSource\": \"Social Security Disability\",\r\n            \"howMuch\": 500.0\r\n          }\r\n        ]\r\n      },\r\n      \"question8A\": {\r\n        \"answer\": \"N\"\r\n      },\r\n      \"question9\": {\r\n        \"question\": {\r\n          \"yesorNo\": \"N\"\r\n        },\r\n        \"amountPaid\": 0.0\r\n      },\r\n      \"question10\": {\r\n        \"question\": {\r\n          \"yesorNo\": \"Y\"\r\n        },\r\n        \"name\": \"79637723G\",\r\n        \"amountPaid\": 0.0\r\n      },\r\n      \"question11\": {\r\n        \"question\": {\r\n          \"yesorNo\": \"Y\"\r\n        },\r\n        \"whoPaid\": \"677735290\",\r\n        \"amountPaid\": 300.0\r\n      },\r\n      \"question12\": {\r\n        \"answer\": \"Y\"\r\n      },\r\n      \"question13\": {\r\n        \"question\": {\r\n          \"yesorNo\": \"Y\"\r\n        },\r\n        \"newSNAPInfo\": [\r\n          {\r\n            \"name\": \"79637723G\"\r\n          }\r\n        ]\r\n      },\r\n      \"question14\": {\r\n        \"question\": {\r\n          \"yesorNo\": \"N\"\r\n        },\r\n        \"newTracffickingInfo\": [\r\n          {\r\n            \"name\": \"79637723G\"\r\n          }\r\n        ]\r\n      },\r\n      \"question15\": {\r\n        \"question\": {\r\n          \"yesorNo\": \"Y\"\r\n        },\r\n        \"newTradingInfo\": [\r\n          {\r\n            \"name\": \"79637723G\"\r\n          }\r\n        ]\r\n      },\r\n      \"question16\": {\r\n        \"answer\": \"Y\",\r\n        \"name\": \"79637723G\"\r\n      },\r\n      \"question17\": {\r\n        \"question\": {\r\n          \"yesorNo\": \"Y\"\r\n        },\r\n        \"newFleeingFelonInfo\": [\r\n          {\r\n            \"name\": \"79637723G\"\r\n          }\r\n        ]\r\n      },\r\n      \"question18\": {\r\n        \"question\": {\r\n          \"yesorNo\": \"Y\"\r\n        },\r\n        \"newProbationParoleInfo\": [\r\n          {\r\n            \"name\": \"677735290\"\r\n          }\r\n        ]\r\n      },\r\n      \"certification\": {\r\n        \"cellPh\": {\r\n          \r\n        },\r\n        \"signature\": {\r\n          \"signature\": \"Robert Doe\",\r\n          \"signDate\": \"2021-10-06\"\r\n        }\r\n      }\r\n    }\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/form/CF37",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"form",
+						"CF37"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SAR 7",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer N4xdsVf1N1cczw97HrL9S10F8GI",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"formIdentifier\": \"string\",\r\n  \"overlayText\": \"PREVIEW\",\r\n  \"caseNumber\": \"B13M042\",\r\n  \"form\": {\r\n    \"baseDocumentType\": {\r\n     \"countyCode\": \"19\",\r\n      \"caseNumber\": \"B13M042\",\r\n      \"caseName\": \"string\",\r\n      \"barCode\": \"string\",\r\n      \"mailbackAddressOffice\": {\r\n        \"addressName\": \"string\",\r\n        \"streetName\": \"string\",\r\n        \"aptORsuitenumber\": \"string\",\r\n        \"city\": \"string\",\r\n        \"state\": \"AK\",\r\n        \"zipcode\": \"string\",\r\n        \"zipcode4\": \"string\"\r\n      },\r\n      \"program\": [\r\n        \"string\"\r\n      ],\r\n      \"individual\": {\r\n        \"personId\": 0,\r\n        \"name\": {},\r\n        \"cin\": \"string\",\r\n        \"age\": 0,\r\n        \"gender\": \"M\",\r\n        \"newIndividual\": false\r\n      },\r\n      \"caseIndividuals\": {\r\n        \"personId\": 0,\r\n        \"name\": {\r\n            \"firstName\":\"John\",\r\n            \"lastName\":\"Doe\"\r\n        },\r\n        \"cin\": \"123\",\r\n        \"age\": 0,\r\n        \"gender\": \"M\",\r\n        \"newIndividual\": false\r\n      }\r\n    },\r\n    \"formSignsStartMonth\": \"06142021\",\r\n    \"formSignsEndMonth\":\"06152021\",\r\n    \"cwFamilySize\": 0,\r\n    \"cwIRT\": 12.25,\r\n    \"cfFamilySize\": 0,\r\n    \"cfIRT\": 12.25,\r\n    \"calWorksStop\": true,\r\n    \"calFreshStop\": true,\r\n    \"mediCalStop\": true,\r\n    \"requireSpouseSig\": false,\r\n\r\n    \"question1\": {\r\n      \"yesorNo\": \"Y\",\r\n     \"question1Record\": [\r\n        {\r\n          \"moveType\": \"In\",\r\n          \"dateOfMove\": \"2021-05-20\",\r\n          \"name\": \"123\",\r\n          \"dateOfBirth\": \"2021-05-20\",\r\n          \"relationship\": \"string\",\r\n          \"regularlyPurchase\": \"Y\"\r\n        },\r\n         {\r\n          \"moveType\": \"In\",\r\n          \"dateOfMove\": \"2021-07-20\",\r\n          \"name\": \"123\",\r\n          \"dateOfBirth\": \"2021-07-20\",\r\n          \"relationship\": \"sister\",\r\n          \"regularlyPurchase\": \"Y\"\r\n        },\r\n         {\r\n          \"moveType\": \"In\",\r\n          \"dateOfMove\": \"2021-07-20\",\r\n          \"name\": \"123\",\r\n          \"dateOfBirth\": \"2021-07-20\",\r\n          \"relationship\": \"sister\",\r\n          \"regularlyPurchase\": \"Y\"\r\n        },\r\n         {\r\n          \"moveType\": \"In\",\r\n          \"dateOfMove\": \"2021-07-20\",\r\n          \"name\": \"123\",\r\n          \"dateOfBirth\": \"2021-07-20\",\r\n          \"relationship\": \"sister\",\r\n          \"regularlyPurchase\": \"Y\"\r\n        },\r\n         {\r\n          \"moveType\": \"In\",\r\n          \"dateOfMove\": \"2021-07-20\",\r\n          \"name\": \"123\",\r\n          \"dateOfBirth\": \"2021-07-20\",\r\n          \"relationship\": \"sister\",\r\n          \"regularlyPurchase\": \"Y\"\r\n        }\r\n      ]\r\n    },\r\n\r\n    \"question2\": {\r\n      \"yesorNo\": \"Y\",\r\n      \"newHomeAddress\": {\r\n        \"addressLine\": \"string\",\r\n        \"city\": \"string\",\r\n        \"state\": \"AK\",\r\n        \"zipcode\": \"string\",\r\n        \"apt\": \"string\"\r\n      },\r\n      \"dateMoved\": \"2021-05-20\",\r\n      \"newMailingAddress\": {\r\n        \"addressLine\": \"string\",\r\n        \"city\": \"string\",\r\n        \"state\": \"AK\",\r\n        \"zipcode\": \"string\",\r\n        \"apt\": \"string\"\r\n      }\r\n    },\r\n    \"question3\": {\r\n      \"rentOrMortgageAmt\": 12.25,\r\n      \"paidSepearetlyAmt\": 12.25,\r\n      \"phoneCost\": null,\r\n      \"trashCost\": true,\r\n      \"waterCost\": true,\r\n      \"gasOrElectricCost\": true,\r\n      \"otherCost\": true\r\n    },\r\n    \"question4\": {\r\n      \"yesorNo\": \"Y\",\r\n      \"nameOfPerson\": \"123\",\r\n      \"aOrB\":\"A\",\r\n      \"convictionPlace\": \"string\",\r\n      \"convictionDate\": \"2021-05-20\",\r\n      \"convictionType\": \"DrugRelated\"\r\n    },\r\n    \"question5\": {\r\n      \"whoChanged\": \"123\",\r\n      \"medicalCost\": 12.25\r\n    },\r\n    \"question6\": {\r\n      \"yesorNo\": \"Y\",\r\n      \"whoPaidSupport\": \"123\",\r\n      \"reportMonthAmt\": 12.25\r\n    },\r\n    \"question7\": {\r\n      \"yesorNo\": \"Y\",\r\n      \"whoPaidCare\": \"123\",\r\n      \"careReportMonthAmt\": 12.25,\r\n      \"childName\": [\r\n        \"123\",\r\n        \"123\"\r\n      ]\r\n    },\r\n    \"question8\": {\r\n      \"yesorNo\": \"Y\",\r\n      \"question8Records\": [\r\n        {\r\n          \"whoOwnsSold\": \"123\",\r\n          \"propertyType\": \"string\",\r\n          \"when\": \"2021-05-20\",\r\n          \"amount\": 12.25,\r\n          \"changeType\": \"Bought\"\r\n        }\r\n      ]\r\n    },\r\n    \"question9\": {\r\n      \"yesorNo\": \"Y\",\r\n      \"question9Records\": [\r\n        {\r\n          \"yesorNo\": \"Y\",\r\n          \"nameOfWhoGotIncome\": \"123\",\r\n          \"selfEmployed\": true,\r\n          \"howOftenPaid\": \"Weekly\",\r\n          \"grossAmount1\": 12.25,\r\n          \"grossAmount2\": 12.25,\r\n          \"grossAmount3\": 12.25,\r\n          \"grossAmount4\": 12.25,\r\n          \"grossAmount5\": 12.25,\r\n          \"grossAmount6\": 12.25,\r\n          \"hoursWorkPerMonth\": 0,\r\n          \"willIncomeContinue\": \"Y\"\r\n        }\r\n      ]\r\n    },\r\n    \"question10\": {\r\n      \"yesorNo\": \"Y\",\r\n      \"incomeChangeExplain\": \"string\"\r\n    },\r\n    \"question11\": {\r\n      \"yesorNo\": \"Y\",\r\n      \"question11Records\": [\r\n        {\r\n          \"name\": \"123\",\r\n          \"incomeSource\": \"string\",\r\n          \"oneTimeOrMonthly\": \"string\",\r\n          \"howMuch\": 12.25\r\n        }\r\n      ]\r\n    },\r\n    \"question12\": {\r\n      \"yesorNo\": \"Y\",\r\n      \"moneyChangeExplain\": \"string\"\r\n    },\r\n    \"question13\": {\r\n      \"yesorNo\": \"Y\",\r\n      \"familyChange\": true,\r\n      \"job\": true,\r\n      \"disability\": true,\r\n      \"immigration\": true,\r\n      \"insurance\": true,\r\n      \"custoday\": true,\r\n      \"inHome\": true,\r\n      \"schoolAttend\": true,\r\n      \"someonePaid\": true,\r\n      \"explainSomeonePaid\": \"string\",\r\n      \"other\": true,\r\n      \"explainOther\": \"string\"\r\n    },\r\n    \"certification\": {\r\n      \"signature\": {\r\n        \"signature\": \"string\",\r\n        \"signDate\": \"string\"\r\n      },\r\n      \"homePH\": {\r\n        \"number\": \"310-222-8787\",\r\n        \"extension\": \"string\",\r\n        \"additionalProp1\": \"string\",\r\n        \"additionalProp2\": \"string\",\r\n        \"additionalProp3\": \"string\"\r\n      },\r\n      \"cellPh\": {\r\n        \"number\": \"310-111-8787\",\r\n        \"extension\": \"string\",\r\n        \"additionalProp1\": \"string\",\r\n        \"additionalProp2\": \"string\",\r\n        \"additionalProp3\": \"string\"\r\n      },\r\n      \"signatureOfSpouse\": {\r\n        \"signature\": \"spouse signature\",\r\n        \"signDate\": \"2021-01-01\"\r\n      },\r\n      \"signatureOfWitness\": {\r\n        \"signature\": \"witness signature\",\r\n        \"signDate\": \"string\"\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\n\r\n\r\n"
+				},
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/form/SAR7",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"form",
+						"SAR7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MC210",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer N4xdsVf1N1cczw97HrL9S10F8GI",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"formIdentifier\": \"string\",\r\n  \"overlayText\": \"PREVIEW\",\r\n  \"caseNumber\": \"string\",\r\n  \"form\": {\r\n    \"MC210RV\": {\r\n      \"baseDocumentType\": {\r\n        \"countyCode\": \"string\",\r\n        \"applicationNumber\": \"string\",\r\n        \"applicationDate\": \"2021-06-10\",\r\n        \"caseNumber\": \"string\",\r\n        \"caseName\": \"string\",\r\n        \"caseDate\": \"2021-06-10\",\r\n        \"barCode\": \"string\",\r\n        \"customerId\": \"string\",\r\n        \"fileUnit\": \"string\",\r\n        \"workerName\": \"string\",\r\n        \"workerPhone\": {\r\n          \"number\": \"string\",\r\n          \"extension\": \"string\",\r\n          \"additionalProp1\": \"string\",\r\n          \"additionalProp2\": \"string\",\r\n          \"additionalProp3\": \"string\"\r\n        },\r\n        \"mailingAddress\": {\r\n          \"addressName\": \"string\",\r\n          \"streetName\": \"string\",\r\n          \"aptORsuitenumber\": \"string\",\r\n          \"city\": \"string\",\r\n          \"state\": \"AK\",\r\n          \"zipcode\": \"string\",\r\n          \"zipcode4\": \"string\"\r\n        },\r\n        \"mailbackAddressOffice\": {\r\n          \"addressName\": \"string\",\r\n          \"streetName\": \"string\",\r\n          \"aptORsuitenumber\": \"string\",\r\n          \"city\": \"string\",\r\n          \"state\": \"AK\",\r\n          \"zipcode\": \"string\",\r\n          \"zipcode4\": \"string\"\r\n        },\r\n        \"program\": [\r\n          \"string\"\r\n        ],\r\n        \"beginDate\": \"2021-06-10\",\r\n        \"endDate\": \"2021-06-10\",\r\n        \"officeNumber\": \"string\",\r\n        \"language\": \"01\",\r\n        \"storageDetails\": {\r\n          \"periodReportStorage\": {\r\n            \"reportMonth\": {\r\n              \"month\": 0,\r\n              \"year\": 0\r\n            },\r\n            \"reportMonthName\": \"string\",\r\n            \"reportType\": \"65\"\r\n          }\r\n        },\r\n        \"individual\": {\r\n          \"personId\": 0,\r\n          \"name\": {},\r\n          \"cin\": \"string\",\r\n          \"age\": 0,\r\n          \"gender\": \"M\",\r\n          \"newIndividual\": false\r\n        },\r\n        \"caseIndividuals\": {\r\n          \"personId\": 0,\r\n          \"name\": {},\r\n         \"cin\": \"string\",\r\n          \"age\": 0,\r\n          \"gender\": \"M\",\r\n          \"newIndividual\": false\r\n        }\r\n      },\r\n      \"itsTimeToRenew\": {\r\n        \"name\": \"string\",\r\n        \"dob\": \"2021-01-05\"\r\n      },\r\n      \"contactInformation\": {\r\n        \"thisInfoIsCorrect\": true,\r\n        \"ihaveUpdatedMyInfo\": true,\r\n        \"reviewContact\": {\r\n          \"name\": \"string\",\r\n          \"homeAddr\": {\r\n            \"addressLine\": \"string\",\r\n            \"city\": \"string\",\r\n            \"state\": \"AK\",\r\n            \"zipcode\": \"string\",\r\n            \"apt\": \"string\"\r\n          },\r\n          \"mailAddr\": {\r\n            \"addressLine\": \"string\",\r\n            \"city\": \"string\",\r\n            \"state\": \"AK\",\r\n            \"zipcode\": \"string\",\r\n            \"apt\": \"string\"\r\n          },\r\n          \"currentPHNum\": {\r\n            \"home\": {\r\n              \"yesNo\": \"Y\",\r\n              \"number\": {\r\n                \"number\": \"string\",\r\n                \"extension\": \"string\",\r\n                \"additionalProp1\": \"string\",\r\n                \"additionalProp2\": \"string\",\r\n                \"additionalProp3\": \"string\"\r\n              }\r\n            },\r\n            \"cell\": {\r\n              \"yesNo\": \"Y\",\r\n              \"number\": {\r\n                \"number\": \"string\",\r\n                \"extension\": \"string\",\r\n                \"additionalProp1\": \"string\",\r\n                \"additionalProp2\": \"string\",\r\n                \"additionalProp3\": \"string\"\r\n              }\r\n            },\r\n            \"other\": {\r\n              \"yesNo\": \"Y\",\r\n              \"number\": {\r\n                \"number\": \"string\",\r\n                \"extension\": \"string\",\r\n                \"additionalProp1\": \"string\",\r\n                \"additionalProp2\": \"string\",\r\n                \"additionalProp3\": \"string\"\r\n              }\r\n            }\r\n          },\r\n          \"email\": \"string\",\r\n          \"languageWriteToYou\": \"01\",\r\n          \"languageSpeakToYou\": \"01\"\r\n        },\r\n        \"name\": \"string\",\r\n        \"homeAddr\": {\r\n          \"addressLine\": \"string\",\r\n          \"city\": \"string\",\r\n          \"state\": \"AK\",\r\n          \"zipcode\": \"string\",\r\n          \"apt\": \"string\"\r\n        },\r\n        \"mailAddr\": {\r\n          \"addressLine\": \"string\",\r\n          \"city\": \"string\",\r\n          \"state\": \"AK\",\r\n          \"zipcode\": \"string\",\r\n          \"apt\": \"string\"\r\n        },\r\n        \"currentPHNum\": {\r\n          \"home\": {\r\n            \"yesNo\": \"Y\",\r\n            \"number\": {\r\n              \"number\": \"string\",\r\n              \"extension\": \"string\",\r\n              \"additionalProp1\": \"string\",\r\n              \"additionalProp2\": \"string\",\r\n              \"additionalProp3\": \"string\"\r\n            }\r\n          },\r\n          \"cell\": {\r\n            \"yesNo\": \"Y\",\r\n            \"number\": {\r\n              \"number\": \"string\",\r\n              \"extension\": \"string\",\r\n              \"additionalProp1\": \"string\",\r\n              \"additionalProp2\": \"string\",\r\n              \"additionalProp3\": \"string\"\r\n            }\r\n          },\r\n          \"work\": {\r\n            \"yesNo\": \"Y\",\r\n            \"number\": {\r\n              \"number\": \"string\",\r\n              \"extension\": \"string\",\r\n              \"additionalProp1\": \"string\",\r\n              \"additionalProp2\": \"string\",\r\n              \"additionalProp3\": \"string\"\r\n            }\r\n          },\r\n          \"other\": {\r\n            \"yesNo\": \"Y\",\r\n            \"number\": {\r\n              \"number\": \"string\",\r\n              \"extension\": \"string\",\r\n              \"additionalProp1\": \"string\",\r\n              \"additionalProp2\": \"string\",\r\n              \"additionalProp3\": \"string\"\r\n            }\r\n          }\r\n        },\r\n        \"email\": \"string\",\r\n        \"languageWriteToYou\": \"01\",\r\n        \"languageSpeakToYou\": \"01\",\r\n        \"bestContactEmail\": true,\r\n        \"bestContactPhone\": true,\r\n        \"bestContactMail\": true\r\n      },\r\n      \"hhMemberSection\": {\r\n        \"hhMemberReview\": [\r\n         {\r\n            \"name\": \"string\",\r\n            \"howRelate\": \"string\",\r\n            \"address\": {\r\n              \"addressLine\": \"string\",\r\n              \"city\": \"string\",\r\n              \"state\": \"AK\",\r\n              \"zipcode\": \"string\",\r\n              \"apt\": \"string\"\r\n            },\r\n            \"isThisCorrect\": \"Y\"\r\n          }\r\n        ],\r\n        \"hhMemberUpdate\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"howRelate\": \"string\",\r\n            \"whatChanged\": \"string\"\r\n          }\r\n        ]\r\n      },\r\n      \"incomeSection\": {\r\n        \"incomeReview\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"source\": \"string\",\r\n            \"grossIncome\": 0,\r\n            \"isThisCorrect\": \"Y\",\r\n            \"date\": \"2021-01-05\"\r\n          }\r\n        ],\r\n        \"incomeUpdate\": {\r\n          \"spouseSupportDate\": \"2021-01-05\",\r\n          \"newIncome\": [\r\n            {\r\n              \"name\": \"string\",\r\n              \"source\": \"string\",\r\n              \"grossIncome\": 0,\r\n              \"startDate\": \"2021-06-10\",\r\n              \"howOften\": \"annually\",\r\n              \"expectToContinue\": {\r\n                \"yesNo\": \"Y\",\r\n                \"lastDate\": \"2021-06-10\"\r\n              }\r\n            }\r\n          ]\r\n        },\r\n        \"incomeChangeMonth\": {\r\n          \"yesNo\": \"Y\",\r\n          \"incomeChangeDetl\": [\r\n            {\r\n              \"name\": \"string\",\r\n              \"totalIncomeExpected\": 0\r\n            }\r\n          ]\r\n        },\r\n        \"inkindIncomeSection\": {\r\n          \"thisIsRent\": true,\r\n          \"inkindList\": [\r\n            {\r\n              \"name\": \"string\",\r\n              \"whatWasFree\": {\r\n                \"rent\": true,\r\n                \"utilities\": true,\r\n                \"food\": true\r\n              },\r\n              \"expectToKeep\": {\r\n                \"yesNo\": true,\r\n                \"lastDateOfIncome\": \"2021-01-05\"\r\n              }\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"expenseAndDeductionsSection\": {\r\n        \"expenseReview\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"type\": \"string\",\r\n            \"amount\": 0,\r\n            \"howOften\": \"monthly\",\r\n            \"isThisCorrect\": \"Y\"\r\n          }\r\n        ],\r\n        \"expenseUpdate\": {\r\n          \"alimonyPaid\": \"2021-01-05\",\r\n          \"newExpense\": [\r\n            {\r\n              \"name\": \"string\",\r\n              \"type\": \"string\",\r\n              \"amount\": 0,\r\n              \"howOften\": \"monthly\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"resourcesPropertySection\": {\r\n        \"resourcesPropertyReview\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"resourcesPropertytype\": \"string\",\r\n            \"resourcesPropertyDetails\": \"string\",\r\n            \"value\": 0,\r\n            \"isThisCorrect\": \"Y\"\r\n          }\r\n        ],\r\n        \"resourcesPropertyUpdate\": {\r\n          \"newFinancial\": [\r\n            {\r\n              \"ownerName\": \"string\",\r\n              \"resourcesPropertytype\": \"string\",\r\n              \"resourcesPropertyDetails\": \"string\",\r\n              \"changeToReport\": \"string\",\r\n              \"dateOfChange\": \"2021-01-15\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"prevReportedVehicleSection\": [\r\n        {\r\n          \"ownerName\": \"string\",\r\n          \"vehicleWorth\": 0,\r\n          \"makeModel\": \"string\",\r\n          \"howMuchOwe\": 0\r\n        }\r\n      ],\r\n      \"realPropSection\": {\r\n        \"homeILiveIn\": true,\r\n        \"rentalInvestmentProp\": true,\r\n        \"formerHome\": true,\r\n        \"propertyForSale\": true,\r\n        \"intendToReturnToProperty\": \"Y\",\r\n        \"familyLivingIntheProp\": \"Y\",\r\n        \"familyRelationship\": \"string\"\r\n      },\r\n      \"medicareSection\": {\r\n        \"medicareReview\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"premiumPartA\": 0,\r\n            \"premiumPartB\": 0,\r\n            \"premiumPartC\": 0,\r\n            \"premiumPartD\": 0,\r\n            \"isThisCorrect\": \"Y\"\r\n          }\r\n        ],\r\n        \"medicareUpdate\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"medicareNumber\": \"string\",\r\n            \"premiumPartA\": 0,\r\n            \"premiumPartB\": 0,\r\n            \"premiumPartC\": 0,\r\n            \"premiumPartD\": 0\r\n          }\r\n        ]\r\n      },\r\n      \"ltcSection\": {\r\n        \"ltcReview\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"facilityName\": \"string\",\r\n            \"facilityAddress\": {\r\n              \"addressLine\": \"string\",\r\n              \"city\": \"string\",\r\n              \"state\": \"AK\",\r\n              \"zipcode\": \"string\",\r\n              \"apt\": \"string\"\r\n            },\r\n            \"isThisCorrect\": \"Y\"\r\n          }\r\n        ],\r\n        \"ltcUpdate\": {\r\n          \"newLTC\": [\r\n            {\r\n              \"name\": \"string\",\r\n              \"facilityName\": \"string\",\r\n              \"facilityAddress\": {\r\n                \"addressLine\": \"string\",\r\n                \"city\": \"string\",\r\n                \"state\": \"AK\",\r\n                \"zipcode\": \"string\",\r\n                \"apt\": \"string\"\r\n              },\r\n              \"entranceDate\": \"2021-01-05\",\r\n              \"dischargeDate\": \"2021-01-05\",\r\n              \"spouseInfo\": {\r\n                \"name\": \"string\",\r\n                \"address\": {\r\n                  \"addressLine\": \"string\",\r\n                  \"city\": \"string\",\r\n                  \"state\": \"AK\",\r\n                  \"zipcode\": \"string\",\r\n                  \"apt\": \"string\"\r\n                }\r\n              }\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"otherHealthInsurance\": {\r\n        \"ohiReview\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"insuranceCompany\": \"string\",\r\n            \"typeOfInsurance\": \"string\",\r\n            \"premiumYouPay\": 0,\r\n            \"howOften\": \"monthly\",\r\n            \"isThisCorrect\": \"Y\"\r\n          }\r\n        ],\r\n        \"ohiUpdate\": {\r\n          \"newOHI\": [\r\n            {\r\n              \"name\": \"string\",\r\n              \"insuranceCompany\": \"string\",\r\n              \"typeOfInsurance\": \"string\",\r\n              \"premiumYouPay\": 0,\r\n              \"howOften\": \"monthly\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"hhChangesSection\": {\r\n        \"hhMediCal\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"dob\": \"2021-06-10\",\r\n            \"socialSecurityNum\": \"111111111\"\r\n          }\r\n        ],\r\n        \"hhPregnant\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"dueDate\": \"2021-01-05\",\r\n            \"howManyBabies\": 0\r\n          }\r\n        ],\r\n        \"hhFormerFosterYouth\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"state\": \"AK\"\r\n          }\r\n        ],\r\n        \"hhImmigrationOrCitizen\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"newStatusNumber\": \"string\"\r\n          }\r\n        ],\r\n        \"hhDisability\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"isResultOfInjure\": \"Y\"\r\n          }\r\n        ],\r\n        \"hhMedicare\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"medicareNumber\": \"string\",\r\n            \"monthlyPremium\": 0\r\n          }\r\n        ],\r\n        \"hhLTC\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"entranceDate\": \"2021-01-05\",\r\n            \"dischargeDate\": \"2021-01-05\",\r\n            \"facilityName\": \"string\",\r\n            \"facilityAddress\": {\r\n              \"addressLine\": \"string\",\r\n              \"city\": \"string\",\r\n              \"state\": \"AK\",\r\n              \"zipcode\": \"string\",\r\n              \"apt\": \"string\"\r\n            },\r\n            \"spouseOrPartnerName\": \"string\",\r\n            \"spouseOrPartnerAddr\": {\r\n              \"addressLine\": \"string\",\r\n              \"city\": \"string\",\r\n              \"state\": \"AK\",\r\n              \"zipcode\": \"string\",\r\n              \"apt\": \"string\"\r\n            }\r\n          }\r\n        ]\r\n      },\r\n      \"healthProgramReferral\": {\r\n        \"q1NoCostUnder21\": \"Y\",\r\n        \"q2NoCostSuppPreg\": \"Y\",\r\n        \"q3ReceivingKidney\": \"Y\",\r\n        \"q4ReceivedOrganTransplant\": \"Y\",\r\n        \"q5inHomeCareAgedBlind\": \"Y\",\r\n        \"q6NeedHelpWithLTC\": \"Y\"\r\n      },\r\n      \"certification\": {\r\n        \"signature\": {\r\n          \"signature\": \"string\",\r\n          \"signDate\": \"string\"\r\n        },\r\n        \"homePH\": {\r\n          \"number\": \"string\",\r\n          \"extension\": \"string\",\r\n          \"additionalProp1\": \"string\",\r\n          \"additionalProp2\": \"string\",\r\n          \"additionalProp3\": \"string\"\r\n        },\r\n        \"cellPh\": {\r\n          \"number\": \"string\",\r\n          \"extension\": \"string\",\r\n          \"additionalProp1\": \"string\",\r\n          \"additionalProp2\": \"string\",\r\n          \"additionalProp3\": \"string\"\r\n        },\r\n        \"signatureOfSpouse\": {\r\n          \"signature\": \"string\",\r\n          \"signDate\": \"string\"\r\n        },\r\n        \"signatureOfWitness\": {\r\n          \"signature\": \"string\",\r\n          \"signDate\": \"string\"\r\n        }\r\n      }\r\n    }\r\n  },\r\n  \"confirmationNumber\": \"string\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/form/MC210RV",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"form",
+						"MC210RV"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MC216",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer N4xdsVf1N1cczw97HrL9S10F8GI",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"formIdentifier\": \"string\",\r\n  \"overlayText\": \"PREVIEW\",\r\n  \"caseNumber\": \"string\",\r\n  \"form\": {\r\n    \"MC210RV\": {\r\n      \"baseDocumentType\": {\r\n        \"countyCode\": \"string\",\r\n        \"applicationNumber\": \"string\",\r\n        \"applicationDate\": \"2021-06-10\",\r\n        \"caseNumber\": \"string\",\r\n        \"caseName\": \"string\",\r\n        \"caseDate\": \"2021-06-10\",\r\n        \"barCode\": \"string\",\r\n        \"customerId\": \"string\",\r\n        \"fileUnit\": \"string\",\r\n        \"workerName\": \"string\",\r\n        \"workerPhone\": {\r\n          \"number\": \"string\",\r\n          \"extension\": \"string\",\r\n          \"additionalProp1\": \"string\",\r\n          \"additionalProp2\": \"string\",\r\n          \"additionalProp3\": \"string\"\r\n        },\r\n        \"mailingAddress\": {\r\n          \"addressName\": \"string\",\r\n          \"streetName\": \"string\",\r\n          \"aptORsuitenumber\": \"string\",\r\n          \"city\": \"string\",\r\n          \"state\": \"AK\",\r\n          \"zipcode\": \"string\",\r\n          \"zipcode4\": \"string\"\r\n        },\r\n        \"mailbackAddressOffice\": {\r\n          \"addressName\": \"string\",\r\n          \"streetName\": \"string\",\r\n          \"aptORsuitenumber\": \"string\",\r\n          \"city\": \"string\",\r\n          \"state\": \"AK\",\r\n          \"zipcode\": \"string\",\r\n          \"zipcode4\": \"string\"\r\n        },\r\n        \"program\": [\r\n          \"string\"\r\n        ],\r\n        \"beginDate\": \"2021-06-10\",\r\n        \"endDate\": \"2021-06-10\",\r\n        \"officeNumber\": \"string\",\r\n        \"language\": \"01\",\r\n        \"storageDetails\": {\r\n          \"periodReportStorage\": {\r\n            \"reportMonth\": {\r\n              \"month\": 0,\r\n              \"year\": 0\r\n            },\r\n            \"reportMonthName\": \"string\",\r\n            \"reportType\": \"65\"\r\n          }\r\n        },\r\n        \"individual\": {\r\n          \"personId\": 0,\r\n          \"name\": {},\r\n          \"cin\": \"string\",\r\n          \"age\": 0,\r\n          \"gender\": \"M\",\r\n          \"newIndividual\": false\r\n        },\r\n        \"caseIndividuals\": {\r\n          \"personId\": 0,\r\n          \"name\": {},\r\n         \"cin\": \"string\",\r\n          \"age\": 0,\r\n          \"gender\": \"M\",\r\n          \"newIndividual\": false\r\n        }\r\n      },\r\n      \"itsTimeToRenew\": {\r\n        \"name\": \"string\",\r\n        \"dob\": \"2021-01-05\"\r\n      },\r\n      \"contactInformation\": {\r\n        \"thisInfoIsCorrect\": true,\r\n        \"ihaveUpdatedMyInfo\": true,\r\n        \"reviewContact\": {\r\n          \"name\": \"string\",\r\n          \"homeAddr\": {\r\n            \"addressLine\": \"string\",\r\n            \"city\": \"string\",\r\n            \"state\": \"AK\",\r\n            \"zipcode\": \"string\",\r\n            \"apt\": \"string\"\r\n          },\r\n          \"mailAddr\": {\r\n            \"addressLine\": \"string\",\r\n            \"city\": \"string\",\r\n            \"state\": \"AK\",\r\n            \"zipcode\": \"string\",\r\n            \"apt\": \"string\"\r\n          },\r\n          \"currentPHNum\": {\r\n            \"home\": {\r\n              \"yesNo\": \"Y\",\r\n              \"number\": {\r\n                \"number\": \"string\",\r\n                \"extension\": \"string\",\r\n                \"additionalProp1\": \"string\",\r\n                \"additionalProp2\": \"string\",\r\n                \"additionalProp3\": \"string\"\r\n              }\r\n            },\r\n            \"cell\": {\r\n              \"yesNo\": \"Y\",\r\n              \"number\": {\r\n                \"number\": \"string\",\r\n                \"extension\": \"string\",\r\n                \"additionalProp1\": \"string\",\r\n                \"additionalProp2\": \"string\",\r\n                \"additionalProp3\": \"string\"\r\n              }\r\n            },\r\n            \"other\": {\r\n              \"yesNo\": \"Y\",\r\n              \"number\": {\r\n                \"number\": \"string\",\r\n                \"extension\": \"string\",\r\n                \"additionalProp1\": \"string\",\r\n                \"additionalProp2\": \"string\",\r\n                \"additionalProp3\": \"string\"\r\n              }\r\n            }\r\n          },\r\n          \"email\": \"string\",\r\n          \"languageWriteToYou\": \"01\",\r\n          \"languageSpeakToYou\": \"01\"\r\n        },\r\n        \"name\": \"string\",\r\n        \"homeAddr\": {\r\n          \"addressLine\": \"string\",\r\n          \"city\": \"string\",\r\n          \"state\": \"AK\",\r\n          \"zipcode\": \"string\",\r\n          \"apt\": \"string\"\r\n        },\r\n        \"mailAddr\": {\r\n          \"addressLine\": \"string\",\r\n          \"city\": \"string\",\r\n          \"state\": \"AK\",\r\n          \"zipcode\": \"string\",\r\n          \"apt\": \"string\"\r\n        },\r\n        \"currentPHNum\": {\r\n          \"home\": {\r\n            \"yesNo\": \"Y\",\r\n            \"number\": {\r\n              \"number\": \"string\",\r\n              \"extension\": \"string\",\r\n              \"additionalProp1\": \"string\",\r\n              \"additionalProp2\": \"string\",\r\n              \"additionalProp3\": \"string\"\r\n            }\r\n          },\r\n          \"cell\": {\r\n            \"yesNo\": \"Y\",\r\n            \"number\": {\r\n              \"number\": \"string\",\r\n              \"extension\": \"string\",\r\n              \"additionalProp1\": \"string\",\r\n              \"additionalProp2\": \"string\",\r\n              \"additionalProp3\": \"string\"\r\n            }\r\n          },\r\n          \"work\": {\r\n            \"yesNo\": \"Y\",\r\n            \"number\": {\r\n              \"number\": \"string\",\r\n              \"extension\": \"string\",\r\n              \"additionalProp1\": \"string\",\r\n              \"additionalProp2\": \"string\",\r\n              \"additionalProp3\": \"string\"\r\n            }\r\n          },\r\n          \"other\": {\r\n            \"yesNo\": \"Y\",\r\n            \"number\": {\r\n              \"number\": \"string\",\r\n              \"extension\": \"string\",\r\n              \"additionalProp1\": \"string\",\r\n              \"additionalProp2\": \"string\",\r\n              \"additionalProp3\": \"string\"\r\n            }\r\n          }\r\n        },\r\n        \"email\": \"string\",\r\n        \"languageWriteToYou\": \"01\",\r\n        \"languageSpeakToYou\": \"01\",\r\n        \"bestContactEmail\": true,\r\n        \"bestContactPhone\": true,\r\n        \"bestContactMail\": true\r\n      },\r\n      \"hhMemberSection\": {\r\n        \"hhMemberReview\": [\r\n         {\r\n            \"name\": \"string\",\r\n            \"howRelate\": \"string\",\r\n            \"address\": {\r\n              \"addressLine\": \"string\",\r\n              \"city\": \"string\",\r\n              \"state\": \"AK\",\r\n              \"zipcode\": \"string\",\r\n              \"apt\": \"string\"\r\n            },\r\n            \"isThisCorrect\": \"Y\"\r\n          }\r\n        ],\r\n        \"hhMemberUpdate\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"howRelate\": \"string\",\r\n            \"whatChanged\": \"string\"\r\n          }\r\n        ]\r\n      },\r\n      \"incomeSection\": {\r\n        \"incomeReview\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"source\": \"string\",\r\n            \"grossIncome\": 0,\r\n            \"isThisCorrect\": \"Y\",\r\n            \"date\": \"2021-01-05\"\r\n          }\r\n        ],\r\n        \"incomeUpdate\": {\r\n          \"spouseSupportDate\": \"2021-01-05\",\r\n          \"newIncome\": [\r\n            {\r\n              \"name\": \"string\",\r\n              \"source\": \"string\",\r\n              \"grossIncome\": 0,\r\n              \"startDate\": \"2021-06-10\",\r\n              \"howOften\": \"annually\",\r\n              \"expectToContinue\": {\r\n                \"yesNo\": \"Y\",\r\n                \"lastDate\": \"2021-06-10\"\r\n              }\r\n            }\r\n          ]\r\n        },\r\n        \"incomeChangeMonth\": {\r\n          \"yesNo\": \"Y\",\r\n          \"incomeChangeDetl\": [\r\n            {\r\n              \"name\": \"string\",\r\n              \"totalIncomeExpected\": 0\r\n            }\r\n          ]\r\n        },\r\n        \"inkindIncomeSection\": {\r\n          \"thisIsRent\": true,\r\n          \"inkindList\": [\r\n            {\r\n              \"name\": \"string\",\r\n              \"whatWasFree\": {\r\n                \"rent\": true,\r\n                \"utilities\": true,\r\n                \"food\": true\r\n              },\r\n              \"expectToKeep\": {\r\n                \"yesNo\": true,\r\n                \"lastDateOfIncome\": \"2021-01-05\"\r\n              }\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"expenseAndDeductionsSection\": {\r\n        \"expenseReview\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"type\": \"string\",\r\n            \"amount\": 0,\r\n            \"howOften\": \"monthly\",\r\n            \"isThisCorrect\": \"Y\"\r\n          }\r\n        ],\r\n        \"expenseUpdate\": {\r\n          \"alimonyPaid\": \"2021-01-05\",\r\n          \"newExpense\": [\r\n            {\r\n              \"name\": \"string\",\r\n              \"type\": \"string\",\r\n              \"amount\": 0,\r\n              \"howOften\": \"monthly\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"resourcesPropertySection\": {\r\n        \"resourcesPropertyReview\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"resourcesPropertytype\": \"string\",\r\n            \"resourcesPropertyDetails\": \"string\",\r\n            \"value\": 0,\r\n            \"isThisCorrect\": \"Y\"\r\n          }\r\n        ],\r\n        \"resourcesPropertyUpdate\": {\r\n          \"newFinancial\": [\r\n            {\r\n              \"ownerName\": \"string\",\r\n              \"resourcesPropertytype\": \"string\",\r\n              \"resourcesPropertyDetails\": \"string\",\r\n              \"changeToReport\": \"string\",\r\n              \"dateOfChange\": \"2021-01-15\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"prevReportedVehicleSection\": [\r\n        {\r\n          \"ownerName\": \"string\",\r\n          \"vehicleWorth\": 0,\r\n          \"makeModel\": \"string\",\r\n          \"howMuchOwe\": 0\r\n        }\r\n      ],\r\n      \"realPropSection\": {\r\n        \"homeILiveIn\": true,\r\n        \"rentalInvestmentProp\": true,\r\n        \"formerHome\": true,\r\n        \"propertyForSale\": true,\r\n        \"intendToReturnToProperty\": \"Y\",\r\n        \"familyLivingIntheProp\": \"Y\",\r\n        \"familyRelationship\": \"string\"\r\n      },\r\n      \"medicareSection\": {\r\n        \"medicareReview\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"premiumPartA\": 0,\r\n            \"premiumPartB\": 0,\r\n            \"premiumPartC\": 0,\r\n            \"premiumPartD\": 0,\r\n            \"isThisCorrect\": \"Y\"\r\n          }\r\n        ],\r\n        \"medicareUpdate\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"medicareNumber\": \"string\",\r\n            \"premiumPartA\": 0,\r\n            \"premiumPartB\": 0,\r\n            \"premiumPartC\": 0,\r\n            \"premiumPartD\": 0\r\n          }\r\n        ]\r\n      },\r\n      \"ltcSection\": {\r\n        \"ltcReview\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"facilityName\": \"string\",\r\n            \"facilityAddress\": {\r\n              \"addressLine\": \"string\",\r\n              \"city\": \"string\",\r\n              \"state\": \"AK\",\r\n              \"zipcode\": \"string\",\r\n              \"apt\": \"string\"\r\n            },\r\n            \"isThisCorrect\": \"Y\"\r\n          }\r\n        ],\r\n        \"ltcUpdate\": {\r\n          \"newLTC\": [\r\n            {\r\n              \"name\": \"string\",\r\n              \"facilityName\": \"string\",\r\n              \"facilityAddress\": {\r\n                \"addressLine\": \"string\",\r\n                \"city\": \"string\",\r\n                \"state\": \"AK\",\r\n                \"zipcode\": \"string\",\r\n                \"apt\": \"string\"\r\n              },\r\n              \"entranceDate\": \"2021-01-05\",\r\n              \"dischargeDate\": \"2021-01-05\",\r\n              \"spouseInfo\": {\r\n                \"name\": \"string\",\r\n                \"address\": {\r\n                  \"addressLine\": \"string\",\r\n                  \"city\": \"string\",\r\n                  \"state\": \"AK\",\r\n                  \"zipcode\": \"string\",\r\n                  \"apt\": \"string\"\r\n                }\r\n              }\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"otherHealthInsurance\": {\r\n        \"ohiReview\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"insuranceCompany\": \"string\",\r\n            \"typeOfInsurance\": \"string\",\r\n            \"premiumYouPay\": 0,\r\n            \"howOften\": \"monthly\",\r\n            \"isThisCorrect\": \"Y\"\r\n          }\r\n        ],\r\n        \"ohiUpdate\": {\r\n          \"newOHI\": [\r\n            {\r\n              \"name\": \"string\",\r\n              \"insuranceCompany\": \"string\",\r\n              \"typeOfInsurance\": \"string\",\r\n              \"premiumYouPay\": 0,\r\n              \"howOften\": \"monthly\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"hhChangesSection\": {\r\n        \"hhMediCal\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"dob\": \"2021-06-10\",\r\n            \"socialSecurityNum\": \"111111111\"\r\n          }\r\n        ],\r\n        \"hhPregnant\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"dueDate\": \"2021-01-05\",\r\n            \"howManyBabies\": 0\r\n          }\r\n        ],\r\n        \"hhFormerFosterYouth\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"state\": \"AK\"\r\n          }\r\n        ],\r\n        \"hhImmigrationOrCitizen\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"newStatusNumber\": \"string\"\r\n          }\r\n        ],\r\n        \"hhDisability\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"isResultOfInjure\": \"Y\"\r\n          }\r\n        ],\r\n        \"hhMedicare\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"medicareNumber\": \"string\",\r\n            \"monthlyPremium\": 0\r\n          }\r\n        ],\r\n        \"hhLTC\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"entranceDate\": \"2021-01-05\",\r\n            \"dischargeDate\": \"2021-01-05\",\r\n            \"facilityName\": \"string\",\r\n            \"facilityAddress\": {\r\n              \"addressLine\": \"string\",\r\n              \"city\": \"string\",\r\n              \"state\": \"AK\",\r\n              \"zipcode\": \"string\",\r\n              \"apt\": \"string\"\r\n            },\r\n            \"spouseOrPartnerName\": \"string\",\r\n            \"spouseOrPartnerAddr\": {\r\n              \"addressLine\": \"string\",\r\n              \"city\": \"string\",\r\n              \"state\": \"AK\",\r\n              \"zipcode\": \"string\",\r\n              \"apt\": \"string\"\r\n            }\r\n          }\r\n        ]\r\n      },\r\n      \"healthProgramReferral\": {\r\n        \"q1NoCostUnder21\": \"Y\",\r\n        \"q2NoCostSuppPreg\": \"Y\",\r\n        \"q3ReceivingKidney\": \"Y\",\r\n        \"q4ReceivedOrganTransplant\": \"Y\",\r\n        \"q5inHomeCareAgedBlind\": \"Y\",\r\n        \"q6NeedHelpWithLTC\": \"Y\"\r\n      },\r\n      \"certification\": {\r\n        \"signature\": {\r\n          \"signature\": \"string\",\r\n          \"signDate\": \"string\"\r\n        },\r\n        \"homePH\": {\r\n          \"number\": \"string\",\r\n          \"extension\": \"string\",\r\n          \"additionalProp1\": \"string\",\r\n          \"additionalProp2\": \"string\",\r\n          \"additionalProp3\": \"string\"\r\n        },\r\n        \"cellPh\": {\r\n          \"number\": \"string\",\r\n          \"extension\": \"string\",\r\n          \"additionalProp1\": \"string\",\r\n          \"additionalProp2\": \"string\",\r\n          \"additionalProp3\": \"string\"\r\n        },\r\n        \"signatureOfSpouse\": {\r\n          \"signature\": \"string\",\r\n          \"signDate\": \"string\"\r\n        },\r\n        \"signatureOfWitness\": {\r\n          \"signature\": \"string\",\r\n          \"signDate\": \"string\"\r\n        }\r\n      }\r\n    }\r\n  },\r\n  \"confirmationNumber\": \"string\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/form/MC210RV",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"form",
+						"MC210RV"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MC217",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer N4xdsVf1N1cczw97HrL9S10F8GI",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"formIdentifier\": \"string\",\r\n  \"overlayText\": \"PREVIEW\",\r\n  \"caseNumber\": \"string\",\r\n  \"form\": {\r\n    \"MC210RV\": {\r\n      \"baseDocumentType\": {\r\n        \"countyCode\": \"string\",\r\n        \"applicationNumber\": \"string\",\r\n        \"applicationDate\": \"2021-06-10\",\r\n        \"caseNumber\": \"string\",\r\n        \"caseName\": \"string\",\r\n        \"caseDate\": \"2021-06-10\",\r\n        \"barCode\": \"string\",\r\n        \"customerId\": \"string\",\r\n        \"fileUnit\": \"string\",\r\n        \"workerName\": \"string\",\r\n        \"workerPhone\": {\r\n          \"number\": \"string\",\r\n          \"extension\": \"string\",\r\n          \"additionalProp1\": \"string\",\r\n          \"additionalProp2\": \"string\",\r\n          \"additionalProp3\": \"string\"\r\n        },\r\n        \"mailingAddress\": {\r\n          \"addressName\": \"string\",\r\n          \"streetName\": \"string\",\r\n          \"aptORsuitenumber\": \"string\",\r\n          \"city\": \"string\",\r\n          \"state\": \"AK\",\r\n          \"zipcode\": \"string\",\r\n          \"zipcode4\": \"string\"\r\n        },\r\n        \"mailbackAddressOffice\": {\r\n          \"addressName\": \"string\",\r\n          \"streetName\": \"string\",\r\n          \"aptORsuitenumber\": \"string\",\r\n          \"city\": \"string\",\r\n          \"state\": \"AK\",\r\n          \"zipcode\": \"string\",\r\n          \"zipcode4\": \"string\"\r\n        },\r\n        \"program\": [\r\n          \"string\"\r\n        ],\r\n        \"beginDate\": \"2021-06-10\",\r\n        \"endDate\": \"2021-06-10\",\r\n        \"officeNumber\": \"string\",\r\n        \"language\": \"01\",\r\n        \"storageDetails\": {\r\n          \"periodReportStorage\": {\r\n            \"reportMonth\": {\r\n              \"month\": 0,\r\n              \"year\": 0\r\n            },\r\n            \"reportMonthName\": \"string\",\r\n            \"reportType\": \"65\"\r\n          }\r\n        },\r\n        \"individual\": {\r\n          \"personId\": 0,\r\n          \"name\": {},\r\n          \"cin\": \"string\",\r\n          \"age\": 0,\r\n          \"gender\": \"M\",\r\n          \"newIndividual\": false\r\n        },\r\n        \"caseIndividuals\": {\r\n          \"personId\": 0,\r\n          \"name\": {},\r\n         \"cin\": \"string\",\r\n          \"age\": 0,\r\n          \"gender\": \"M\",\r\n          \"newIndividual\": false\r\n        }\r\n      },\r\n      \"itsTimeToRenew\": {\r\n        \"name\": \"string\",\r\n        \"dob\": \"2021-01-05\"\r\n      },\r\n      \"contactInformation\": {\r\n        \"thisInfoIsCorrect\": true,\r\n        \"ihaveUpdatedMyInfo\": true,\r\n        \"reviewContact\": {\r\n          \"name\": \"string\",\r\n          \"homeAddr\": {\r\n            \"addressLine\": \"string\",\r\n            \"city\": \"string\",\r\n            \"state\": \"AK\",\r\n            \"zipcode\": \"string\",\r\n            \"apt\": \"string\"\r\n          },\r\n          \"mailAddr\": {\r\n            \"addressLine\": \"string\",\r\n            \"city\": \"string\",\r\n            \"state\": \"AK\",\r\n            \"zipcode\": \"string\",\r\n            \"apt\": \"string\"\r\n          },\r\n          \"currentPHNum\": {\r\n            \"home\": {\r\n              \"yesNo\": \"Y\",\r\n              \"number\": {\r\n                \"number\": \"string\",\r\n                \"extension\": \"string\",\r\n                \"additionalProp1\": \"string\",\r\n                \"additionalProp2\": \"string\",\r\n                \"additionalProp3\": \"string\"\r\n              }\r\n            },\r\n            \"cell\": {\r\n              \"yesNo\": \"Y\",\r\n              \"number\": {\r\n                \"number\": \"string\",\r\n                \"extension\": \"string\",\r\n                \"additionalProp1\": \"string\",\r\n                \"additionalProp2\": \"string\",\r\n                \"additionalProp3\": \"string\"\r\n              }\r\n            },\r\n            \"other\": {\r\n              \"yesNo\": \"Y\",\r\n              \"number\": {\r\n                \"number\": \"string\",\r\n                \"extension\": \"string\",\r\n                \"additionalProp1\": \"string\",\r\n                \"additionalProp2\": \"string\",\r\n                \"additionalProp3\": \"string\"\r\n              }\r\n            }\r\n          },\r\n          \"email\": \"string\",\r\n          \"languageWriteToYou\": \"01\",\r\n          \"languageSpeakToYou\": \"01\"\r\n        },\r\n        \"name\": \"string\",\r\n        \"homeAddr\": {\r\n          \"addressLine\": \"string\",\r\n          \"city\": \"string\",\r\n          \"state\": \"AK\",\r\n          \"zipcode\": \"string\",\r\n          \"apt\": \"string\"\r\n        },\r\n        \"mailAddr\": {\r\n          \"addressLine\": \"string\",\r\n          \"city\": \"string\",\r\n          \"state\": \"AK\",\r\n          \"zipcode\": \"string\",\r\n          \"apt\": \"string\"\r\n        },\r\n        \"currentPHNum\": {\r\n          \"home\": {\r\n            \"yesNo\": \"Y\",\r\n            \"number\": {\r\n              \"number\": \"string\",\r\n              \"extension\": \"string\",\r\n              \"additionalProp1\": \"string\",\r\n              \"additionalProp2\": \"string\",\r\n              \"additionalProp3\": \"string\"\r\n            }\r\n          },\r\n          \"cell\": {\r\n            \"yesNo\": \"Y\",\r\n            \"number\": {\r\n              \"number\": \"string\",\r\n              \"extension\": \"string\",\r\n              \"additionalProp1\": \"string\",\r\n              \"additionalProp2\": \"string\",\r\n              \"additionalProp3\": \"string\"\r\n            }\r\n          },\r\n          \"work\": {\r\n            \"yesNo\": \"Y\",\r\n            \"number\": {\r\n              \"number\": \"string\",\r\n              \"extension\": \"string\",\r\n              \"additionalProp1\": \"string\",\r\n              \"additionalProp2\": \"string\",\r\n              \"additionalProp3\": \"string\"\r\n            }\r\n          },\r\n          \"other\": {\r\n            \"yesNo\": \"Y\",\r\n            \"number\": {\r\n              \"number\": \"string\",\r\n              \"extension\": \"string\",\r\n              \"additionalProp1\": \"string\",\r\n              \"additionalProp2\": \"string\",\r\n              \"additionalProp3\": \"string\"\r\n            }\r\n          }\r\n        },\r\n        \"email\": \"string\",\r\n        \"languageWriteToYou\": \"01\",\r\n        \"languageSpeakToYou\": \"01\",\r\n        \"bestContactEmail\": true,\r\n        \"bestContactPhone\": true,\r\n        \"bestContactMail\": true\r\n      },\r\n      \"hhMemberSection\": {\r\n        \"hhMemberReview\": [\r\n         {\r\n            \"name\": \"string\",\r\n            \"howRelate\": \"string\",\r\n            \"address\": {\r\n              \"addressLine\": \"string\",\r\n              \"city\": \"string\",\r\n              \"state\": \"AK\",\r\n              \"zipcode\": \"string\",\r\n              \"apt\": \"string\"\r\n            },\r\n            \"isThisCorrect\": \"Y\"\r\n          }\r\n        ],\r\n        \"hhMemberUpdate\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"howRelate\": \"string\",\r\n            \"whatChanged\": \"string\"\r\n          }\r\n        ]\r\n      },\r\n      \"incomeSection\": {\r\n        \"incomeReview\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"source\": \"string\",\r\n            \"grossIncome\": 0,\r\n            \"isThisCorrect\": \"Y\",\r\n            \"date\": \"2021-01-05\"\r\n          }\r\n        ],\r\n        \"incomeUpdate\": {\r\n          \"spouseSupportDate\": \"2021-01-05\",\r\n          \"newIncome\": [\r\n            {\r\n              \"name\": \"string\",\r\n              \"source\": \"string\",\r\n              \"grossIncome\": 0,\r\n              \"startDate\": \"2021-06-10\",\r\n              \"howOften\": \"annually\",\r\n              \"expectToContinue\": {\r\n                \"yesNo\": \"Y\",\r\n                \"lastDate\": \"2021-06-10\"\r\n              }\r\n            }\r\n          ]\r\n        },\r\n        \"incomeChangeMonth\": {\r\n          \"yesNo\": \"Y\",\r\n          \"incomeChangeDetl\": [\r\n            {\r\n              \"name\": \"string\",\r\n              \"totalIncomeExpected\": 0\r\n            }\r\n          ]\r\n        },\r\n        \"inkindIncomeSection\": {\r\n          \"thisIsRent\": true,\r\n          \"inkindList\": [\r\n            {\r\n              \"name\": \"string\",\r\n              \"whatWasFree\": {\r\n                \"rent\": true,\r\n                \"utilities\": true,\r\n                \"food\": true\r\n              },\r\n              \"expectToKeep\": {\r\n                \"yesNo\": true,\r\n                \"lastDateOfIncome\": \"2021-01-05\"\r\n              }\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"expenseAndDeductionsSection\": {\r\n        \"expenseReview\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"type\": \"string\",\r\n            \"amount\": 0,\r\n            \"howOften\": \"monthly\",\r\n            \"isThisCorrect\": \"Y\"\r\n          }\r\n        ],\r\n        \"expenseUpdate\": {\r\n          \"alimonyPaid\": \"2021-01-05\",\r\n          \"newExpense\": [\r\n            {\r\n              \"name\": \"string\",\r\n              \"type\": \"string\",\r\n              \"amount\": 0,\r\n              \"howOften\": \"monthly\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"resourcesPropertySection\": {\r\n        \"resourcesPropertyReview\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"resourcesPropertytype\": \"string\",\r\n            \"resourcesPropertyDetails\": \"string\",\r\n            \"value\": 0,\r\n            \"isThisCorrect\": \"Y\"\r\n          }\r\n        ],\r\n        \"resourcesPropertyUpdate\": {\r\n          \"newFinancial\": [\r\n            {\r\n              \"ownerName\": \"string\",\r\n              \"resourcesPropertytype\": \"string\",\r\n              \"resourcesPropertyDetails\": \"string\",\r\n              \"changeToReport\": \"string\",\r\n              \"dateOfChange\": \"2021-01-15\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"prevReportedVehicleSection\": [\r\n        {\r\n          \"ownerName\": \"string\",\r\n          \"vehicleWorth\": 0,\r\n          \"makeModel\": \"string\",\r\n          \"howMuchOwe\": 0\r\n        }\r\n      ],\r\n      \"realPropSection\": {\r\n        \"homeILiveIn\": true,\r\n        \"rentalInvestmentProp\": true,\r\n        \"formerHome\": true,\r\n        \"propertyForSale\": true,\r\n        \"intendToReturnToProperty\": \"Y\",\r\n        \"familyLivingIntheProp\": \"Y\",\r\n        \"familyRelationship\": \"string\"\r\n      },\r\n      \"medicareSection\": {\r\n        \"medicareReview\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"premiumPartA\": 0,\r\n            \"premiumPartB\": 0,\r\n            \"premiumPartC\": 0,\r\n            \"premiumPartD\": 0,\r\n            \"isThisCorrect\": \"Y\"\r\n          }\r\n        ],\r\n        \"medicareUpdate\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"medicareNumber\": \"string\",\r\n            \"premiumPartA\": 0,\r\n            \"premiumPartB\": 0,\r\n            \"premiumPartC\": 0,\r\n            \"premiumPartD\": 0\r\n          }\r\n        ]\r\n      },\r\n      \"ltcSection\": {\r\n        \"ltcReview\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"facilityName\": \"string\",\r\n            \"facilityAddress\": {\r\n              \"addressLine\": \"string\",\r\n              \"city\": \"string\",\r\n              \"state\": \"AK\",\r\n              \"zipcode\": \"string\",\r\n              \"apt\": \"string\"\r\n            },\r\n            \"isThisCorrect\": \"Y\"\r\n          }\r\n        ],\r\n        \"ltcUpdate\": {\r\n          \"newLTC\": [\r\n            {\r\n              \"name\": \"string\",\r\n              \"facilityName\": \"string\",\r\n              \"facilityAddress\": {\r\n                \"addressLine\": \"string\",\r\n                \"city\": \"string\",\r\n                \"state\": \"AK\",\r\n                \"zipcode\": \"string\",\r\n                \"apt\": \"string\"\r\n              },\r\n              \"entranceDate\": \"2021-01-05\",\r\n              \"dischargeDate\": \"2021-01-05\",\r\n              \"spouseInfo\": {\r\n                \"name\": \"string\",\r\n                \"address\": {\r\n                  \"addressLine\": \"string\",\r\n                  \"city\": \"string\",\r\n                  \"state\": \"AK\",\r\n                  \"zipcode\": \"string\",\r\n                  \"apt\": \"string\"\r\n                }\r\n              }\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"otherHealthInsurance\": {\r\n        \"ohiReview\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"insuranceCompany\": \"string\",\r\n            \"typeOfInsurance\": \"string\",\r\n            \"premiumYouPay\": 0,\r\n            \"howOften\": \"monthly\",\r\n            \"isThisCorrect\": \"Y\"\r\n          }\r\n        ],\r\n        \"ohiUpdate\": {\r\n          \"newOHI\": [\r\n            {\r\n              \"name\": \"string\",\r\n              \"insuranceCompany\": \"string\",\r\n              \"typeOfInsurance\": \"string\",\r\n              \"premiumYouPay\": 0,\r\n              \"howOften\": \"monthly\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"hhChangesSection\": {\r\n        \"hhMediCal\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"dob\": \"2021-06-10\",\r\n            \"socialSecurityNum\": \"111111111\"\r\n          }\r\n        ],\r\n        \"hhPregnant\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"dueDate\": \"2021-01-05\",\r\n            \"howManyBabies\": 0\r\n          }\r\n        ],\r\n        \"hhFormerFosterYouth\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"state\": \"AK\"\r\n          }\r\n        ],\r\n        \"hhImmigrationOrCitizen\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"newStatusNumber\": \"string\"\r\n          }\r\n        ],\r\n        \"hhDisability\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"isResultOfInjure\": \"Y\"\r\n          }\r\n        ],\r\n        \"hhMedicare\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"medicareNumber\": \"string\",\r\n            \"monthlyPremium\": 0\r\n          }\r\n        ],\r\n        \"hhLTC\": [\r\n          {\r\n            \"name\": \"string\",\r\n            \"entranceDate\": \"2021-01-05\",\r\n            \"dischargeDate\": \"2021-01-05\",\r\n            \"facilityName\": \"string\",\r\n            \"facilityAddress\": {\r\n              \"addressLine\": \"string\",\r\n              \"city\": \"string\",\r\n              \"state\": \"AK\",\r\n              \"zipcode\": \"string\",\r\n              \"apt\": \"string\"\r\n            },\r\n            \"spouseOrPartnerName\": \"string\",\r\n            \"spouseOrPartnerAddr\": {\r\n              \"addressLine\": \"string\",\r\n              \"city\": \"string\",\r\n              \"state\": \"AK\",\r\n              \"zipcode\": \"string\",\r\n              \"apt\": \"string\"\r\n            }\r\n          }\r\n        ]\r\n      },\r\n      \"healthProgramReferral\": {\r\n        \"q1NoCostUnder21\": \"Y\",\r\n        \"q2NoCostSuppPreg\": \"Y\",\r\n        \"q3ReceivingKidney\": \"Y\",\r\n        \"q4ReceivedOrganTransplant\": \"Y\",\r\n        \"q5inHomeCareAgedBlind\": \"Y\",\r\n        \"q6NeedHelpWithLTC\": \"Y\"\r\n      },\r\n      \"certification\": {\r\n        \"signature\": {\r\n          \"signature\": \"string\",\r\n          \"signDate\": \"string\"\r\n        },\r\n        \"homePH\": {\r\n          \"number\": \"string\",\r\n          \"extension\": \"string\",\r\n          \"additionalProp1\": \"string\",\r\n          \"additionalProp2\": \"string\",\r\n          \"additionalProp3\": \"string\"\r\n        },\r\n        \"cellPh\": {\r\n          \"number\": \"string\",\r\n          \"extension\": \"string\",\r\n          \"additionalProp1\": \"string\",\r\n          \"additionalProp2\": \"string\",\r\n          \"additionalProp3\": \"string\"\r\n        },\r\n        \"signatureOfSpouse\": {\r\n          \"signature\": \"string\",\r\n          \"signDate\": \"string\"\r\n        },\r\n        \"signatureOfWitness\": {\r\n          \"signature\": \"string\",\r\n          \"signDate\": \"string\"\r\n        }\r\n      }\r\n    }\r\n  },\r\n  \"confirmationNumber\": \"string\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/form/MC210RV",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"form",
+						"MC210RV"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Disaster CalFresh",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer 6nfhcwHWHwOXC6FrM3Is0pKk1mY",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"appNumber\": \"106629\",\r\n\t\"signDate\": \"2021-06-14\",\r\n\t\"dsnapInd\": true,\r\n\t\"officeIdentif\": \"60\",\r\n\t\"cmspInd\": false,\r\n\t\"otherPersonApplyInd\": false,\r\n\t\"renewalInd\": false,\r\n\t\"abuseInd\": false,\r\n\t\"domesticAbuseInd\": false,\r\n\t\"elderAbuseInd\": false,\r\n\t\"emergencyRequestsInd\": false,\r\n\t\"immediateNeedInd\": false,\r\n\t\"immediateMedicalInd\": false,\r\n\t\"indianReservationInd\": false,\r\n\t\"otherEmergencyInd\": false,\r\n\t\"initialApplicationInd\": false,\r\n\t\"cfInPersonIntviewInd\": false,\r\n\t\"otherArrangeDisbInd\": false,\r\n\t\"disasterCalFresh\": {\r\n\t\t\"livedIndisasterArea\": true,\r\n\t\t\"workedIndisasterArea\": true,\r\n\t\t\"unableToGetIncome\": true,\r\n\t\t\"loweredIncome\": true,\r\n\t\t\"buyAndPrepareMeals\": true,\r\n\t\t\"employedbyStateAgency\": false,\r\n\t\t\"employedbyWhichStateAgency\": \"1\",\r\n\t\t\"totalIncome\": 1300.25,\r\n\t\t\"incomeSources\": \"cash wage, salary\",\r\n\t\t\"cashOnHand\": \"0.0\",\r\n\t\t\"savingAccounts\": \"130.0\",\r\n\t\t\"checkingAccounts\": \"2000.0\",\r\n\t\t\"other\": \"1495.23\",\r\n\t\t\"disasterExpense\": [\r\n\t\t\t{\r\n\t\t\t\t\"dollarAmt\": 3000.0,\r\n\t\t\t\t\"otherDollarAmount\": 0.0,\r\n\t\t\t\t\"hsngExpnHelpInd\": false,\r\n\t\t\t\t\"hsngHlpAmt\": 0.0,\r\n\t\t\t\t\"liheapInd\": false,\r\n\t\t\t\t\"reimburseAmount\": 0.0,\r\n\t\t\t\t\"taxDeductibleAlimonyPmtInd\": false\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"gettingCalFreshBenefits\": true,\r\n\t\t\"replaceBenefitsInd\": true,\r\n\t\t\"replaceBenefitsAmount\": \"2300.0\"\r\n\t},\r\n\t\"calFreshAuthRep\": {\r\n\t\t\"firstName\": \"John\",\r\n\t\t\"lastName\": \"Doe\",\r\n\t\t\"phoneNumber\": {\r\n\t\t\t\"type\": \"WK\",\r\n\t\t\t\"number\": \"2385723856\"\r\n\t\t},\r\n\t\t\"address\": {\r\n\t\t\t\"streetAddr1\": \"121\",\r\n\t\t\t\"streetAddr2\": \"5 str\",\r\n\t\t\t\"cityName\": \"Roseville\",\r\n\t\t\t\"zipCode\": \"93437\",\r\n\t\t\t\"state\": \"CA\"\r\n\t\t},\r\n\t\t\"pickupEBTCard\": true,\r\n\t\t\"pickupEBTToPurchaseFood\": true\r\n\t},\r\n\t\"primaryApplicant\": {\r\n\t\t\"id\": 1,\r\n\t\t\"primaryApplicantInd\": false,\r\n\t\t\"ssn\": \"127657826\",\r\n\t\t\"ssnApplyingInd\": false,\r\n\t\t\"firstName\": \"Seri\",\r\n\t\t\"lastName\": \"Gater\",\r\n\t\t\"middleName\": \"M\",\r\n\t\t\"suffix\": \"VI\",\r\n\t\t\"dob\": \"1991-05-29\",\r\n\t\t\"helpwithTransportationInd\": false,\r\n\t\t\"calFreshBenefitsCounty\": \"Placer\",\r\n\t\t\"calFreshBenefitsState\": \"CA\",\r\n\t\t\"deafInd\": false,\r\n\t\t\"calLearnInd\": false,\r\n\t\t\"tempStayInd\": false,\r\n\t\t\"homelessStatus\": false,\r\n\t\t\"ethnicInd\": false,\r\n\t\t\"disabilityInd\": false,\r\n\t\t\"hhGrossIncomeLessThan150Ind\": false,\r\n\t\t\"utilitiesShutOffInd\": false,\r\n\t\t\"hhGrossIncomeLessRentUtilitiesInd\": false,\r\n\t\t\"migrantInd\": false,\r\n\t\t\"noFoodInd\": false,\r\n\t\t\"evictionNoticeInd\": false,\r\n\t\t\"pregnantInd\": false,\r\n\t\t\"houseHoldHeadInd\": false,\r\n\t\t\"destituteInd\": false,\r\n\t\t\"temporarilyOutOfStateInd\": false,\r\n\t\t\"fullTimeStudentInd\": false,\r\n\t\t\"indianCostSharingInd\": false,\r\n\t\t\"federallyRecognizedTribeInd\": false,\r\n\t\t\"sameAddressAsPrimaryInd\": false,\r\n\t\t\"hispanicEthnicInd\": false,\r\n\t\t\"tribeHealthPgmInd\": false,\r\n\t\t\"eligTribalserviceInd\": false,\r\n\t\t\"receivedTribalServiceInd\": false,\r\n\t\t\"shotsUpToDateInd\": false,\r\n\t\t\"unableToFixMealsInd\": false,\r\n\t\t\"caredForByAnotherHHMemInd\": false,\r\n\t\t\"teenParentInd\": false,\r\n\t\t\"ihssInd\": false,\r\n\t\t\"fcChildOrderOfCourtInd\": false,\r\n\t\t\"countFCChildInCFCaseInd\": false,\r\n\t\t\"guiltOfTradingSNAPBeneInd\": false,\r\n\t\t\"guiltOfGunsAmmunitionInd\": false,\r\n\t\t\"convictedOfSNAPBenefitsInd\": false,\r\n\t\t\"leaveCalifFor30Ind\": false,\r\n\t\t\"expectToContinueToLiveinCalInd\": false,\r\n\t\t\"returnPlanToCaliInd\": false,\r\n\t\t\"fraudDuplicateSnapInd\": false,\r\n\t\t\"cashFraudInd\": false,\r\n\t\t\"paroleViolationInd\": false,\r\n\t\t\"fleeingFelon\": false,\r\n\t\t\"thirdPartyLiabilityInd\": false,\r\n\t\t\"interprReqInd\": false,\r\n\t\t\"essentialInd\": false,\r\n\t\t\"taxDependentInd\": false,\r\n\t\t\"tribalTanfInd\": false,\r\n\t\t\"citizenship\": {\r\n\t\t\t\"usCitzOrNationalInd\": false,\r\n\t\t\t\"naturalizedCitzInd\": false,\r\n\t\t\t\"inUSSince1996Ind\": false,\r\n\t\t\t\"tenYearWorkHistoryInd\": false,\r\n\t\t\t\"applyForVisaInd\": false,\r\n\t\t\t\"immigrationChangedin12Ind\": false,\r\n\t\t\t\"citznEligibleImmigrationInd\": false\r\n\t\t}\r\n\t},\r\n\t\"otherApplicants\": [\r\n\t\t{\r\n\t\t\t\"id\": 1623484750,\r\n\t\t\t\"primaryApplicantInd\": false,\r\n\t\t\t\"ssn\": \"823571378\",\r\n\t\t\t\"ssnApplyingInd\": false,\r\n\t\t\t\"firstName\": \"Derek\",\r\n\t\t\t\"lastName\": \"Brid\",\r\n\t\t\t\"middleName\": \"K\",\r\n\t\t\t\"suffix\": \"VI\",\r\n\t\t\t\"dob\": \"1978-05-30\",\r\n\t\t\t\"helpwithTransportationInd\": false,\r\n\t\t\t\"deafInd\": false,\r\n\t\t\t\"calLearnInd\": false,\r\n\t\t\t\"tempStayInd\": false,\r\n\t\t\t\"homelessStatus\": false,\r\n\t\t\t\"ethnicInd\": false,\r\n\t\t\t\"disabilityInd\": false,\r\n\t\t\t\"hhGrossIncomeLessThan150Ind\": false,\r\n\t\t\t\"utilitiesShutOffInd\": false,\r\n\t\t\t\"hhGrossIncomeLessRentUtilitiesInd\": false,\r\n\t\t\t\"migrantInd\": false,\r\n\t\t\t\"noFoodInd\": false,\r\n\t\t\t\"evictionNoticeInd\": false,\r\n\t\t\t\"pregnantInd\": false,\r\n\t\t\t\"houseHoldHeadInd\": false,\r\n\t\t\t\"destituteInd\": false,\r\n\t\t\t\"temporarilyOutOfStateInd\": false,\r\n\t\t\t\"fullTimeStudentInd\": false,\r\n\t\t\t\"indianCostSharingInd\": false,\r\n\t\t\t\"federallyRecognizedTribeInd\": false,\r\n\t\t\t\"sameAddressAsPrimaryInd\": false,\r\n\t\t\t\"hispanicEthnicInd\": false,\r\n\t\t\t\"tribeHealthPgmInd\": false,\r\n\t\t\t\"eligTribalserviceInd\": false,\r\n\t\t\t\"receivedTribalServiceInd\": false,\r\n\t\t\t\"shotsUpToDateInd\": false,\r\n\t\t\t\"unableToFixMealsInd\": false,\r\n\t\t\t\"caredForByAnotherHHMemInd\": false,\r\n\t\t\t\"teenParentInd\": false,\r\n\t\t\t\"ihssInd\": false,\r\n\t\t\t\"fcChildOrderOfCourtInd\": false,\r\n\t\t\t\"countFCChildInCFCaseInd\": false,\r\n\t\t\t\"guiltOfTradingSNAPBeneInd\": false,\r\n\t\t\t\"guiltOfGunsAmmunitionInd\": false,\r\n\t\t\t\"convictedOfSNAPBenefitsInd\": false,\r\n\t\t\t\"leaveCalifFor30Ind\": false,\r\n\t\t\t\"expectToContinueToLiveinCalInd\": false,\r\n\t\t\t\"returnPlanToCaliInd\": false,\r\n\t\t\t\"fraudDuplicateSnapInd\": false,\r\n\t\t\t\"cashFraudInd\": false,\r\n\t\t\t\"paroleViolationInd\": false,\r\n\t\t\t\"fleeingFelon\": false,\r\n\t\t\t\"thirdPartyLiabilityInd\": false,\r\n\t\t\t\"interprReqInd\": false,\r\n\t\t\t\"essentialInd\": false,\r\n\t\t\t\"taxDependentInd\": false,\r\n\t\t\t\"tribalTanfInd\": false,\r\n\t\t\t\"citizenship\": {\r\n\t\t\t\t\"usCitzOrNationalInd\": false,\r\n\t\t\t\t\"naturalizedCitzInd\": false,\r\n\t\t\t\t\"inUSSince1996Ind\": false,\r\n\t\t\t\t\"tenYearWorkHistoryInd\": false,\r\n\t\t\t\t\"applyForVisaInd\": false,\r\n\t\t\t\t\"immigrationChangedin12Ind\": false,\r\n\t\t\t\t\"citznEligibleImmigrationInd\": false\r\n\t\t\t}\r\n\t\t}\r\n\t],\r\n\t\"relationships\": [\r\n\t\t{\r\n\t\t\t\"persID\": 1,\r\n\t\t\t\"pers2ID\": 1623484750,\r\n\t\t\t\"typeCode\": \"SB\",\r\n\t\t\t\"parentOutOfHomeInd\": false,\r\n\t\t\t\"parentUnemployedInd\": false,\r\n\t\t\t\"parentDisabledInd\": false,\r\n\t\t\t\"parentDeceasedInd\": false,\r\n\t\t\t\"parentNoneInd\": false\r\n\t\t}\r\n\t],\r\n\t\"expediteInd\": false,\r\n\t\"otherSpecialNeedsInd\": false\r\n}"
+				},
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/application?countyCode=19",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"application"
+					],
+					"query": [
+						{
+							"key": "countyCode",
+							"value": "19"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TNB4",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer FzPB-WmJ20aFLh5vyboqcP4UxvM",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"formIdentifier\": \"123456778\",\r\n    \"overlayText\": \"PREVIEW\",\r\n    \"caseNumber\": \"B13M042\",\r\n    \"form\": {\r\n        \"tnb4\": {\r\n            \"baseDocumentType\": {\r\n                \"countyCode\": \"19\",\r\n                \"applicationDate\": \"2021-03-27\", \r\n                \"caseNumber\": \"B13M042\",\r\n                \"caseName\": \"string\",\r\n                \"caseDate\": \"2021-03-27\",\r\n                \"barCode\":\"123456778\"\r\n            },\r\n            \r\n            \r\n            \"form\": {\r\n                \"tnbBegDate\": \"2021-03-14\", \r\n                \"certificationEndDate\": \"2021-03-14\", \r\n               \"tnbDueDate\": \"2021-03-14\"\r\n            },\r\n            \"section1\": {\r\n                \"q1moveOutPerson\": [{\r\n                    \"yesNo\": \"Y\",\r\n                    \"name\": \"string\"\r\n                }],\r\n                \"q2stopReceivingSupplemental\": [\r\n                {\r\n                    \"yesNo\": \"Y\",\r\n                    \"name\": \"string\"\r\n                }],\r\n                \"q3anyPersonMoveInOut\": {\r\n                 \"q3yesNo\": \"Y\"\r\n                },\r\n                \"q4totalMonthlyIncomeChange\": {\r\n                     \"q4yesNo\": \"Y\"\r\n                }\r\n            },\r\n            \"section2\": {\r\n             \"completeOnlineApplication\": \"Y\",\r\n             \"completePaperApplication\": \"Y\"\r\n            },\r\n             \"certification\": {\r\n                \"signature\": {\r\n                \"signature\": \"MySignature\",\r\n                \"signDate\": \"2021-03-14\"\r\n            },\r\n            \"printName\": \"string\",\r\n            \"address\": {\r\n                \"addressLine\": \"string\",\r\n                \"city\": \"string\",\r\n                \"state\": \"AK\",\r\n                \"zipcode\": \"string\",\r\n                \"apt\": \"string\"\r\n            },\r\n            \"cellPh\": {\r\n              \"number\": \"string\",\r\n              \"extension\": \"string\",\r\n              \"additionalProp1\": \"string\",\r\n              \"additionalProp2\": \"string\",\r\n              \"additionalProp3\": \"string\"\r\n            }\r\n \r\n        }\r\n    }\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/form/TNB4",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"form",
+						"TNB4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SAWS 2 Plus",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer qDMFuOEuNFz289lTInNUDNFbkT0",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"applicationNumber\": \"3001585\",\r\n    \"form\": {\r\n        \"SAWS2Plus\": {\r\n            \"baseDocumentType\": {\r\n                \"countyCode\": \"58\",\r\n                \"applicationNumber\": \"3001585\",\r\n                \"applicationDate\": \"2021-10-22\",\r\n                \"barCode\": \" \",\r\n                \"mailingAddress\": {\r\n                    \"addressName\": \"John Doe\",\r\n                    \"streetName\": \"PO Box 1\",\r\n                    \"aptORsuitenumber\": \" \",\r\n                    \"city\": \"Olivehurst\",\r\n                    \"state\": \"CA\",\r\n                    \"zipcode\": \"95961\"\r\n                },\r\n                \"mailbackAddressOffice\": {\r\n                    \"addressName\": \"John Doe\",\r\n                    \"streetName\": \"PO Box 1\",\r\n                    \"aptORsuitenumber\": \" \",\r\n                    \"city\": \"Olivehurst\",\r\n                    \"state\": \"CA\",\r\n                    \"zipcode\": \"95961\"\r\n                },\r\n                \"program\": [\r\n                    \"FS\"\r\n                ],\r\n                \"language\": \"03\",\r\n                \"individual\": {\r\n                    \"personId\": 0,\r\n                    \"age\": 31,\r\n                    \"newIndividual\": true\r\n                },\r\n                \"caseIndividuals\": {\r\n                    \"personId\": 0,\r\n                    \"age\": 31,\r\n                    \"newIndividual\": true\r\n                }\r\n            },\r\n            \"q1ApplicantInfo\": {\r\n                \"applicantName\": \"John Doe \",\r\n                \"ssn\": \"\",\r\n                \"dob\": \"1990-03-03\",\r\n                \"homeAddress\": {\r\n                    \"addressLine\": \"\",\r\n                    \"city\": \"\",\r\n                    \"state\": \"\",\r\n                    \"zipcode\": \"\",\r\n                    \"apt\": \"\"\r\n                },\r\n                \"mailingAddressIfDifferent\": {\r\n                    \"addressLine\": \"PO Box 1\",\r\n                    \"city\": \"Olivehurst\",\r\n                    \"state\": \"CA\",\r\n                    \"zipcode\": \"95961\",\r\n                    \"apt\": \" \"\r\n                },\r\n                \"appInfoByEmail\": \"\",\r\n                \"homePhoneNumber\": {\r\n                    \"number\": \"\"\r\n                },\r\n                \"emailAddress\": \"\",\r\n                \"cashAid\": false,\r\n                \"calFresh\": true,\r\n                \"healthCoverage\": false,\r\n                \"generalRelief\": false,\r\n                \"disabilityHelp\": \"\",\r\n                \"homeless\": \"Y\",\r\n                \"writtenLanguage\": \"03\",\r\n                \"spokenLanguage\": \"03\",\r\n                \"interpreterRequired\": false,\r\n                \"signature\": {\r\n                    \"signDate\": \"2021-10-22\",\r\n                    \"signature\": \"test test\"\r\n                }\r\n            },\r\n            \"q2AuthRepInfo\": {},\r\n            \"q3EthRace\": {\r\n                \"doNotProvide\": false,\r\n                \"hispanicYN\": false,\r\n                \"ethnicity\": {\r\n                    \"mexican\": false,\r\n                    \"puertoRican\": false,\r\n                    \"cuban\": false,\r\n                    \"other\": false\r\n                },\r\n                \"raceEthnicOrigins\": {\r\n                    \"white\": false,\r\n                    \"americanIndianAlaskan\": false,\r\n                    \"blackAA\": false,\r\n                    \"otherOrMixed\": false,\r\n                    \"asian\": {\r\n                        \"asian\": false,\r\n                        \"filipino\": false,\r\n                        \"chinese\": false,\r\n                        \"japanese\": false,\r\n                        \"cambodian\": false,\r\n                        \"korean\": false,\r\n                        \"vietnamese\": false,\r\n                        \"asianIndian\": false,\r\n                        \"laotian\": false,\r\n                        \"otherAsian\": false,\r\n                        \"nativeHawaiianOrPacIslander\": false,\r\n                        \"nativeHawaiian\": false,\r\n                        \"guamanianOrChamarro\": false,\r\n                        \"samoan\": false\r\n                    }\r\n                }\r\n            },\r\n            \"q4Interview\": {\r\n                \"cfInterviewInPerson\": false,\r\n                \"cfInterviewOtherArrgmts\": false\r\n            },\r\n            \"q5otherProgramQuestion\": {\r\n                \"q5OtherProgramQuestionDetails\": {\r\n                    \"who\": \" \",\r\n                    \"where\": \" \"\r\n                },\r\n                \"q5OtherProgramQuestion\": {}\r\n            },\r\n            \"q6Household\": {\r\n                \"q6AdultHouseholdInfoDetails\": [\r\n                    {\r\n                        \"cashAid\": false,\r\n                        \"calfresh\": true,\r\n                        \"healthCoverage\": false,\r\n                        \"none\": false,\r\n                        \"name\": \"Doe John\",\r\n                        \"relation\": \"Self\",\r\n                        \"dob\": \"1990-03-03\",\r\n                        \"maritialStatusSingle\": false,\r\n                        \"maritialStatusMarried\": false,\r\n                        \"maritialStatusSeparated\": false,\r\n                        \"maritialStatusDivorced\": false,\r\n                        \"maritialStatusWidowed\": false,\r\n                        \"fullTimeStudent\": false,\r\n                        \"disabled\": false,\r\n                        \"usCitizen\": \"Y\",\r\n                        \"ssn\": \"\"\r\n                    }\r\n                ],\r\n                \"q6aDifferentContactInfo\": {\r\n                    \"q6aDifferentContactInfoDetails\": [\r\n                        {\r\n                            \"name\": \"John Doe\",\r\n                            \"address\": {\r\n                                \"city\": \"Olivehurst\",\r\n                                \"state\": \"CA\",\r\n                                \"zipcode\": \"95961\",\r\n                                \"addressLine\": \"PO Box 1\",\r\n                                \"apt\": \" \"\r\n                            },\r\n                            \"mailAddress\": {\r\n                                \"addressLine\": \"PO Box 1\",\r\n                                \"city\": \"Olivehurst\",\r\n                                \"state\": \"CA\",\r\n                                \"zipcode\": \"95961\",\r\n                                \"apt\": \" \"\r\n                            },\r\n                            \"homePhone\": {\r\n                                \"number\": \"\"\r\n                            },\r\n                            \"workPhone\": {\r\n                                \"number\": \"\"\r\n                            },\r\n                            \"email\": \"\"\r\n                        }\r\n                    ],\r\n                    \"q6aDifferentContactInfo\": {\r\n                        \"yesorNo\": \"Y\"\r\n                    }\r\n                },\r\n                \"q6bChildHouseholdInfoDetails\": {\r\n                    \"q6bChildHouseholdInfoDetail\": []\r\n                },\r\n                \"q6cSSNInformation\": {\r\n                    \"q6cSSNInformationDetail\": [],\r\n                    \"q6cSSNInformation\": {}\r\n                },\r\n                \"q6dMilitaryService\": {\r\n                    \"q6dMilitaryServiceDetail\": [],\r\n                    \"q6dMilitaryService\": {}\r\n                },\r\n                \"q6eNonCitizen\": {\r\n                    \"q6eNonCitizenDetails\": [],\r\n                    \"q6eTenYearsWorkHistory\": {},\r\n                    \"q6eVawaTVisa\": {},\r\n                    \"q6eChangeInStatus\": {\r\n                        \"q6eChangeInStatusDetail\": [],\r\n                        \"q6eChangeInStatus\": {}\r\n                    }\r\n                },\r\n                \"q6fSponsor\": {\r\n                    \"q6fSponsorDetail\": []\r\n                },\r\n                \"q6kFullTimeCare\": {},\r\n                \"q6lStudent\": {\r\n                    \"q6lStudentsDetail\": [],\r\n                    \"q6lStudent\": {}\r\n                },\r\n                \"q6mPregnant\": {\r\n                    \"q6mPregnantTeenDetails\": [],\r\n                    \"q6mPregnant\": {}\r\n                },\r\n                \"q6nCalLearn\": {\r\n                    \"q6nCalLearnDetails\": [],\r\n                    \"q6nCalLearn\": {}\r\n                },\r\n                \"q6opriorFostercare\": {\r\n                    \"q6oPriorFosterCareDetails\": [],\r\n                    \"q6oPriorFosterCare\": {}\r\n                },\r\n                \"q6pCurrentFosterCare\": [],\r\n                \"q6qAllInCali\": {},\r\n                \"q6rLeavingPlanned\": {\r\n                    \"q6rLeavingPlannedDetail\": [],\r\n                    \"q6rLeavingPlanned\": {}\r\n                }\r\n            },\r\n            \"q7UnearnedIncome\": {\r\n                \"question\": {},\r\n                \"socSecurityDisability\": false,\r\n                \"ssiSSP\": false,\r\n                \"cashAid\": false,\r\n                \"cwTanfGAGRCAORCA\": false,\r\n                \"roomAndBoardRenter\": false,\r\n                \"pension\": false,\r\n                \"childSupport\": false,\r\n                \"rentalAndRoyalties\": false,\r\n                \"ssRetOrSurvivors\": false,\r\n                \"perCapitaPayments\": false,\r\n                \"workStudyWtw\": false,\r\n                \"salesOfNotes\": false,\r\n                \"veteransEdBenefits\": false,\r\n                \"railroadDisRetirement\": false,\r\n                \"veteranBenefitPension\": false,\r\n                \"financialAid\": false,\r\n                \"moneyGiftsOrLoans\": false,\r\n                \"unempInsuranceSDI\": false,\r\n                \"workersComp\": false,\r\n                \"netFarmingFishing\": false,\r\n                \"lotteryGambling\": false,\r\n                \"rentFoodClothingHelp\": false,\r\n                \"settlementsOrInsurance\": false,\r\n                \"privateDisabilityOrRetirement\": false,\r\n                \"dividendOrInterest\": false,\r\n                \"strikeBenefits\": false,\r\n                \"other\": false\r\n            },\r\n            \"q8EarnedIncome\": {\r\n                \"q8EarnedIncomeEarned\": {\r\n                    \"yesorNo\": \"N\"\r\n                },\r\n                \"q8EarnedIncomeEarnedDetail\": [],\r\n                \"notContinuingExpl\": \"\",\r\n                \"lostJobDetails\": [],\r\n                \"q8aSelfEmployed\": []\r\n            },\r\n            \"q9OtherIncome\": {\r\n                \"q9OtherIncomeDetail\": [],\r\n                \"q9OtherIncome\": {\r\n                    \"yesorNo\": \"N\"\r\n                }\r\n            },\r\n            \"q10YearlyIncome\": {\r\n                \"q10YearlyIncomeDetail\": [],\r\n                \"q10YearlyIncome\": {\r\n                    \"yesorNo\": \"N\"\r\n                }\r\n            },\r\n            \"q11ChildAdultCareExpenses\": {},\r\n            \"q12ChildSupportPayments\": {\r\n                \"q12ChildSupportPaymentsDetail\": [],\r\n                \"q12ChildSupportPayments\": {}\r\n            },\r\n            \"q13SpousalSupport\": {\r\n                \"q13SpousalSupportDetail\": [],\r\n                \"q13SpousalSupport\": {}\r\n            },\r\n            \"q14SpecialNeeds\": {},\r\n            \"q15Household\": {},\r\n            \"q16Medical\": {\r\n                \"medicalOrDental\": false,\r\n                \"hospitalCare\": false,\r\n                \"prescribedMedications\": false,\r\n                \"insurancePremiums\": false,\r\n                \"medicarePremiums\": false,\r\n                \"aidsProsthetics\": false,\r\n                \"maintainingAttendant\": false,\r\n                \"numberOfMeals\": false,\r\n                \"counterMedications\": false,\r\n                \"costOfTransportation\": false,\r\n                \"prescribedEye\": false,\r\n                \"prescribedSupplies\": false,\r\n                \"serviceAnimals\": false\r\n            },\r\n            \"q17OtherTaxDeductible\": {},\r\n            \"q18recieveFood\": {\r\n                \"details\": []\r\n            },\r\n            \"q19location\": {},\r\n            \"q20IHSS\": {},\r\n            \"q21BuyPrepareFood\": [],\r\n            \"q22HealthCoverage\": {},\r\n            \"q23TaxReturn\": [],\r\n            \"q24HouseholdResources\": [],\r\n            \"q25PersonalProperty\": {\r\n                \"tools\": false,\r\n                \"businessInventory\": false,\r\n                \"livestock\": false,\r\n                \"businessEquipment\": false,\r\n                \"sportEquipment\": false,\r\n                \"motorboatsTrailers\": false,\r\n                \"camperShells\": false,\r\n                \"personalTools\": false,\r\n                \"collections\": false,\r\n                \"listOfOtherJewery\": [],\r\n                \"personalProperty\": {}\r\n            },\r\n            \"q26Vehicles\": {},\r\n            \"q27BuyingProperty\": {},\r\n            \"q28DiversionProgram\": [],\r\n            \"q29DuplicateBenefits\": {},\r\n            \"q30TraffickingBenefits\": {},\r\n            \"q31TradingBenefitForDrugs\": {},\r\n            \"q32TradingBenefitForFirearms\": {},\r\n            \"q33Fraud\": {},\r\n            \"q34NonCooperation\": {},\r\n            \"q35FleeingFelon\": {},\r\n            \"q36ProbationParole\": {},\r\n            \"q37OtherSpecialNeeds\": {},\r\n            \"q38OtherServices\": {},\r\n            \"q39ThirdPartyLiability\": {},\r\n            \"appendixA\": [],\r\n            \"appendixB\": {},\r\n            \"appendixE\": []\r\n        }\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/portal-service/form/SAWS2Plus",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"portal-service",
+						"form",
+						"SAWS2Plus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Form Status Update_SIT2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer 2EUX6ko94mr_CIzqFWgSEsfMB9o"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"teleTypeNumber\": \"(877) 597-4777\",\n    \"caseNum\": \"3298281\",\n    \"caseName\": \"Case Name\",\n    \"countyCode\": \"19\",\n    \"programList\": [\n        \"FS\"\n    ],\n    \"BeginDate\": \"2021-08-26\",\n    \"EndDate\": \"2021-12-30\",\n    \"OfficeNumber\": \"(866) 613-3777\",\n    \"WorkerName\": \"Jackie M Ashley \",\n    \"WorkerPhone\": {\n        \"Number\": \"507-550-1316\"\n    },\n    \"MailingAddress\": {\n        \"addressLine\": \"6737 LA LOMA DRIVE\",\n        \"city\": \"LANCASTER\",\n        \"state\": \"CA\"\n    },\n    \"MailbackAddressOffice\": {\n        \"addressLine\": \"9451 CORBIN AVE STE 200\",\n        \"city\": \"NORTHRIDGE\",\n        \"state\": \"CA\",\n        \"zipcode\": \"91324\"\n    },\n    \"form\": {\n        \"formName\": \"CF RE Packet\",\n        \"formStatus\": \"SE\",\n        \"formDueDate\": \"2021-09-30\",\n        \"formIdentifier\": \"0000000320000307\",\n        \"formReportType\": \"CF\"\n    },\n    \"periodReportStorage\": {\n        \"year\": 2021,\n        \"month\": 9,\n        \"ReportMonthName\": \"September\",\n        \"ReportType\": \"F37\",\n        \"Cycle\": \"00\"\n    },\n    \"CaseIndividuals\": [\n        {\n            \"dob\": 18316800000,\n            \"cin\": \"44805639C\",\n            \"primaryApplicant\": \"N\",\n            \"Age\": 51,\n            \"genderCode\": \"MA\",\n            \"PersonalId\": 819130195,\n            \"firstName\": \"BRUCE\",\n            \"lastname\": \"HANSEL\",\n            \"DOB\": \"1970-08-01\",\n            \"homeless\": false,\n            \"spokenLanguage\": \"EN\"\n        },\n        {\n            \"dob\": 18316800000,\n            \"cin\": \"44805639C\",\n            \"primaryApplicant\": \"Y\",\n            \"Age\": 51,\n            \"genderCode\": \"MA\",\n            \"PersonalId\": 819130195,\n            \"firstName\": \"BRUCE\",\n            \"lastname\": \"HANSEL\",\n            \"DOB\": \"1970-08-01\",\n            \"homeless\": false,\n            \"spokenLanguage\": \"EN\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sit2-api.sit.benefitscaldev.com/formstatus/postFormUpdate",
+					"protocol": "https",
+					"host": [
+						"sit2-api",
+						"sit",
+						"benefitscaldev",
+						"com"
+					],
+					"path": [
+						"formstatus",
+						"postFormUpdate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Form Status Update_SIT3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer KXR95rerT6R2sbOKJnJa9iT7NAg"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"caseNum\": \"K200381\",\n  \"caseName\": \"Maxine Peters\",\n  \"countyCode\": \"19\",\n  \"programList\": [\n    \"FS\"\n  ],\n  \"form\": {\n    \"formName\": \"SAR 7\",\n    \"formStatus\": \"SE\",\n    \"formIdentifier\": \"K20038100371120214205354527\",\n    \"formDueDate\": \"2021-11-30T00:00:00.000+0800\",\n    \"formReportType\": \"S7\"\n  },\n  \"periodReportStorage\": {\n    \"year\": 2021,\n    \"month\": 10,\n    \"ReportMonthName\": \"October\",\n    \"ReportType\": \"F30\",\n    \"Cycle\": \"00\"\n  },\n  \"teleTypeNumber\": \"(877) 597-4777\",\n  \"BeginDate\": \"2021-11-01T00:00:00.000+0700\",\n  \"EndDate\": \"2021-12-31T00:00:00.000+0800\",\n  \"CaseIndividuals\": [\n    {\n      \"primaryApplicant\": \"Y\",\n      \"firstName\": \"Maxine\",\n      \"cin\": \"283522786\",\n      \"homeless\": false,\n      \"homeAddress\": {\n        \"addressLine\": \"260 W GAGE AVE\",\n        \"city\": \"LOS ANGELES\",\n        \"state\": \"CA\",\n        \"zipcode\": \"90003\"\n      },\n      \"genderCode\": \"FE\",\n      \"spokenLanguage\": \"03\",\n      \"dob\": \"2000-03-15\",\n      \"lastname\": \"Peterson\",\n      \"DOB\": \"2000-03-15\",\n      \"PersonalId\": 4002693346,\n      \"Age\": 21\n    }\n  ],\n  \"WorkerName\": \"Domenic Ackart \",\n  \"WorkerPhone\": {\n    \"Number\": \"887-264-2352\"\n  },\n  \"OfficeNumber\": \"(866) 613-3777\",\n  \"MailbackAddressOffice\": {\n    \"addressLine\": \"11 PONDEROSA LANE\",\n    \"city\": \"EL MONTE\",\n    \"state\": \"CA\",\n    \"zipcode\": \"91731\"\n  },\n  \"MailingAddress\": {\n    \"addressLine\": \"260 W GAGE AVE\",\n    \"city\": \"LOS ANGELES\",\n    \"state\": \"CA\",\n    \"zipcode\": \"90003\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sit3-api.sit.benefitscaldev.com/formstatus/postFormUpdate",
+					"protocol": "https",
+					"host": [
+						"sit3-api",
+						"sit",
+						"benefitscaldev",
+						"com"
+					],
+					"path": [
+						"formstatus",
+						"postFormUpdate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Form Status Update_SIT1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer 6yicy4GIRGBmM-X2e7Vl4mYdju8"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"caseNum\": \"B1WM551\",\n    \"countyCode\": \"19\",\n    \"programList\": [\n        \"MC\"\n    ],\n    \"form\": {\n        \"formName\": \"MC RE Packet\",\n        \"formStatus\": \"SE\",\n        \"formDueDate\": \"2022-12-16\",\n        \"formIdentifier\": \"L76272500370420214085902074\",\n        \"formReportType\": \"MI\"\n    },\n    \"periodReportStorage\": {\n        \"year\": 2021,\n        \"month\": 5,\n        \"ReportMonthName\": \"May\",\n        \"ReportType\": \"M41\",\n        \"Cycle\": \"00\"\n    },\n    \"BeginDate\": \"2021-06-16T00:00:00.000+0700\",\n    \"EndDate\": \"2021-12-30T00:00:00.000+0700\",\n    \"OfficeNumber\": \"1-800-222-1234\",\n    \"teleTypeNumber\": \"1-800-323-6782\",\n    \"relationship\": [\n        {\n            \"relationCode\": \"SS\",\n            \"indv1\": \"1\",\n            \"indv2\": \"11\"\n        },\n        {\n            \"relationCode\": \"AU\",\n            \"indv1\": \"1\",\n            \"indv2\": \"12\"\n        }\n    ],\n    \"CaseIndividuals\": [\n        {\n            \"cin\": \"123456789\",\n            \"firstName\": \"Shawn\",\n            \"lastname\": \"Smith\",\n            \"primaryApplicant\": \"Y\",\n            \"healthCoverage\": true,\n            \"DOB\": \"1996-03-12T09:12:33.001+0000\",\n            \"emailAddress\": \"shawnsmith123@gmail.com\",\n            \"writtenLanguage\": \"03\",\n            \"spokenLanguage\": \"03\",\n            \"PersonalId\": 1,\n            \"mailingAddressIfDifferent\": {\n                \"addressLine\": \"700 Larkspur Landing Cir\",\n                \"city\": \"Los Angeles\",\n                \"state\": \"CA\",\n                \"zipcode\": \"92683\",\n                \"apt\": \"125\"\n            },\n            \"cellPhoneNumber\": {\n                \"Number\": \"813489178\",\n                \"Extension\": \"1\",\n                \"type\": \"cell number\"\n            },\n            \"homePhoneNumber\": {\n                \"Number\": \"884939300\",\n                \"Extension\": \"1\",\n                \"type\": \"home number\"\n            },\n            \"workPhoneNumber\": {\n                \"Number\": \"965745444\",\n                \"Extension\": \"1\",\n                \"type\": \"home number\"\n            },\n            \"homeAddress\": {\n                \"addressLine\": \"700 Larkspur Landing Cir\",\n                \"city\": \"Los Angeles\",\n                \"state\": \"CA\",\n                \"zipcode\": \"92683\",\n                \"apt\": \"125\"\n            },\n            \"passedAwayDetail\": {\n                \"decesasedInd\": false\n            },\n            \"LtcNewPersonDetail\": {\n                \"LtcInd\": false\n            },\n            \"incarceratedDetail\": {\n                \"person\": 1,\n                \"dateOfRelease\": \"2016-08-29T09:12:33.001+0000\",\n                \"incarceratedInd\": true\n            },\n            \"IncomeNewDetail\": [\n                {\n                    \"person\": 1,\n                    \"incomeSource\": \"Residency\",\n\t\t\t\t\t\"incomeType\": \"PA\"\n                }\n            ],\n            \"expenseInfoNewDetail\": [\n                {\n                    \"person\": \"shawn\",\n                    \"divorceDate\": \"2016-08-29T09:12:33.001+0000\",\n\t\t\t\t\t\"expenseType\": \"CC\"\n                    \n                },\n                {\n                    \"person\": \"shawn\",\n                    \"amount\": 1230,\n                    \"frequency\": 3,\n                    \"expenseType\": \"CC\"\n                },\n                {\n                    \"person\": \"shawn\",\n                    \"amount\": 1240,\n                    \"frequency\": 3,\n                    \"divorceDate\": \"2016-08-29T09:12:33.001+0000\",\n                    \"expenseType\": \"SE\"\n                },\n                {\n                    \"person\": \"shawn\",\n                    \"amount\": 1250,\n                    \"frequency\": 3,\n                    \"divorceDate\": \"2016-08-29T09:12:33.001+0000\",\n                    \"expenseType\": \"Trave\"\n                }\n            ],\n            \"medicalNewExpense\": {\n                \"mbi\": \"1EG4-TE5-MK72\",\n                \"receivePartA\": true,\n                \"whoPaysA\": \"SH\",\n                \"premiumPartA\": 20,\n                \"receivePartB\": true,\n                \"whoPaysB\": \"ST\",\n                \"premiumPartB\": 90,\n                \"receivePartC\": true,\n                \"whoPaysC\": \"SH\",\n                \"premiumPartC\": 70,\n                \"receivePartD\": true,\n                \"whoPaysD\": \"SH\",\n                \"premiumPartD\": 60\n            },\n            \"otherHealthNewDetail\": [\n                {\n                    \"person\": \"shawn\",\n                    \"insuranceCompany\": \"JMG Insurance Agency\",\n                    \"insuranceType\": \"health\",\n                    \"amount\": 13000,\n                    \"frequency\": 3\n                },\n                {\n                    \"person\": \"Rob\",\n                    \"insuranceCompany\": \"Meritage Medical Network\",\n                    \"insuranceType\": \"dental\",\n                    \"amount\": 14000,\n                    \"frequency\": 6\n                },\n                {\n                    \"person\": \"Tessa\",\n                    \"insuranceCompany\": \"health Insurance\",\n                    \"insuranceType\": \"vision\",\n                    \"amount\": 15000,\n                    \"frequency\": 9\n                }\n            ],\n            \"taxStatus\": {\n                \"marriedFilingJointlyInd\": true,\n                \"marriedFilingSeperatelyInd\": false,\n                \"singleInd\": false,\n                \"headOfHouseholdInd\": false,\n                \"claimedAsOfDependentInd\": false,\n                \"nonTaxFilerInd\": false,\n                \"claimedAsDependentName\": false,\n                \"JointFilerPersonId\": 1\n            }\n        },\n        {\n            \"cin\": \"123456789\",\n            \"firstName\": \"Oliviya\",\n            \"lastname\": \"William\",\n            \"primaryApplicant\": \"N\",\n            \"healthCoverage\": true,\n            \"DOB\": \"1993-03-13T09:12:33.001+0000\",\n            \"emailAddress\": \"lewis123@gmail.com\",\n            \"PersonalId\": 11,\n            \"mailingAddressIfDifferent\": {\n                \"addressLine\": \"2601 S Hoover St\",\n                \"city\": \"Los Angeles\",\n                \"state\": \"CA\",\n                \"zipcode\": \"90007\",\n                \"apt\": \"21\"\n            },\n            \"cellPhoneNumber\": {\n                \"Number\": \"99999999\",\n                \"Extension\": \"1\",\n                \"type\": \"cell number\"\n            },\n            \"homePhoneNumber\": {\n                \"Number\": \"8787866\",\n                \"Extension\": \"1\",\n                \"type\": \"home number\"\n            },\n            \"homeAddress\": {\n                \"addressLine\": \"2603 SN Hoover St\",\n                \"city\": \"45\",\n                \"state\": \"CA\",\n                \"zipcode\": \"90007\",\n                \"apt\": \"21\"\n            },\n            \"passedAwayDetail\": {\n                \"dateOfDeath\": \"2013-08-29T09:12:33.001+0000\",\n                \"deathExpl\": \"Natural causes\",\n                \"decesasedInd\": true\n            },\n            \"LtcNewPersonDetail\": {\n                \"LtcInd\": true,\n                \"entanceDate\": \"2014-08-29T09:12:33.001+0000\",\n                \"dischargeDate\": \"2013-08-29T09:12:33.001+0000\",\n                \"facilityName\": \"Nursing Homes\",\n                \"facilityAddress\": {\n                    \"addressLine\": \"2600 S Hoover St\",\n                    \"city\": \"Los Angeles\",\n                    \"state\": \"CA\",\n                    \"zipcode\": \"90007\",\n                    \"apt\": \"street 21\"\n                },\n                \"domesticPartnerFirstName\": \"Domestic\",\n                \"domesticPartnerMidName\": \"Middle\",\n                \"domesticPartnerLastName\": \"Partner\",\n                \"domesticPartnerAddress\": {\n                    \"addressLine\": \"2600 S Hoover St\",\n                    \"city\": \"Los Angeles\",\n                    \"state\": \"CA\",\n                    \"zipcode\": \"90007\",\n                    \"apt\": \"street 21\"\n                }\n            },\n            \"incarceratedDetail\": {\n                \"incarceratedInd\": false\n            }\n        },\n        {\n            \"cin\": \"123456789\",\n            \"firstName\": \"Amelia\",\n            \"lastname\": \"William\",\n            \"primaryApplicant\": \"N\",\n            \"healthCoverage\": true,\n            \"DOB\": \"1998-02-12T09:12:33.001+0000\",\n            \"emailAddress\": \"henry123@gmail.com\",\n            \"PersonalId\": 12,\n            \"mailingAddressIfDifferent\": {\n                \"addressLine\": \"902 Oak Valley\",\n                \"city\": \"Los Angeles\",\n                \"state\": \"CA\",\n                \"zipcode\": \"93257\",\n                \"apt\": \"11\"\n            },\n            \"cellPhoneNumber\": {\n                \"Number\": \"983618390\",\n                \"Extension\": \"1\",\n                \"type\": \"cell number\"\n            },\n            \"homePhoneNumber\": {\n                \"Number\": \"976542134\",\n                \"Extension\": \"1\",\n                \"type\": \"home number\"\n            },\n            \"homeAddress\": {\n                \"addressLine\": \"902 Oak Valley\",\n                \"city\": \"Los Angels\",\n                \"state\": \"CA\",\n                \"zipcode\": \"93257\",\n                \"apt\": \"81\"\n            },\n            \"passedAwayDetail\": {\n                \"decesasedInd\": false\n            },\n            \"LtcNewPersonDetail\": {\n                \"LtcInd\": false\n            },\n            \"incarceratedDetail\": {\n                \"person\": 3,\n                \"dateOfRelease\": \"2014-02-14T09:12:33.001+0000\",\n                \"incarceratedInd\": true\n            },\n            \"assetNewInfo\": [\n                {\n                    \"amount\": 700,\n                    \"assetType\": \"CA\"\n                },\n                {\n                    \"amount\": 400\n                    \n                },\n                {\n                    \"amount\": 300,\n                    \"assetType\": \"bike\"\n                }\n            ],\n            \"vehicleAndProperty\": [\n                {\n                    \"value\": 23000,\n                    \"amountOwed\": 25000,\n                    \"homeILiveIn\": true,\n                    \"familyLivingIntheProp\": \"Y\",\n                    \"address\": {\n                        \"addressLine\": \"9551 White Road\",\n                        \"city\": \"Cupertino\",\n                        \"state\": \"CA\",\n                        \"zipcode\": \"95014\",\n                        \"apt\": \"91\"\n                    },\n                    \"vehicleInfoDetail\": {\n                        \"person\": \"Henry\",\n                        \"year\": 2012,\n                        \"make\": \"Chevy\",\n                        \"model\": \"Malibu\",\n                        \"estimatedValue\": 12300,\n                        \"amountOwed\": 13400\n                    }\n                }\n            ],\n            \"taxStatus\": {\n                \"marriedFilingJointlyInd\": false,\n                \"marriedFilingSeperatelyInd\": false,\n                \"singleInd\": false,\n                \"headOfHouseholdInd\": false,\n                \"claimedAsOfDependentInd\": false,\n                \"nonTaxFilerInd\": false,\n                \"claimedAsDependentName\": true,\n                \"JointFilerPersonId\": 2\n            }\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "https://sit1-api.sit.benefitscaldev.com/formstatus/postFormUpdate",
+					"protocol": "https",
+					"host": [
+						"sit1-api",
+						"sit",
+						"benefitscaldev",
+						"com"
+					],
+					"path": [
+						"formstatus",
+						"postFormUpdate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Form Status Update_DEV2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer PVWftyspOUC4C3htgGWxxYnXY5g"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"teleTypeNumber\": \"(877) 597-4777\",\n  \"caseNum\": \"B1WP675\",\n  \"caseName\": \"Case Name\",\n  \"countyCode\": \"19\",\n  \"programList\": [\n    \"MC\"\n  ],\n  \"BeginDate\": \"2021-03-01\",\n  \"EndDate\": \"2021-12-31\",\n  \"OfficeNumber\": \"(866) 613-3777\",\n  \"WorkerName\": \"Shenita Eggleston \",\n  \"WorkerPhone\": {\n    \"Number\": \"798-373-1686\"\n  },\n  \"MailingAddress\": {\n    \"addressLine\": \"20 BLUE JAY CIRCLE\",\n    \"city\": \"POMONA\",\n    \"state\": \"CA\"\n  },\n  \"MailbackAddressOffice\": {\n    \"addressLine\": \"9451 CORBIN AVE STE 200\",\n    \"city\": \"NORTHRIDGE\",\n    \"state\": \"CA\",\n    \"zipcode\": \"91324\"\n  },\n  \"form\": {\n    \"formName\": \"Mixed MC RE Packet\",\n    \"formStatus\": \"SE\",\n    \"formDueDate\": \"2021-09-30\",\n    \"formIdentifier\": \"0000000320000325\",\n    \"formReportType\": \"MG\"\n  },\n  \"periodReportStorage\": {\n    \"year\": 2020,\n    \"month\": 12,\n    \"ReportMonthName\": \"December\",\n    \"ReportType\": \"M41\",\n    \"Cycle\": \"00\"\n  },\n  \"CaseIndividuals\": [\n    {\n      \"dob\": 621734400000,\n      \"cin\": \"79637723G\",\n      \"primaryApplicant\": \"Y\",\n      \"Age\": 31,\n      \"genderCode\": \"FE\",\n      \"PersonalId\": 823756084,\n      \"firstName\": \"LORINDA\",\n      \"lastname\": \"RODERICK\",\n      \"DOB\": \"1989-09-14\",\n      \"homeless\": false,\n      \"mailingAddressIfDifferent\": {\n        \"addressLine\": \"20 BLUE JAY CIRCLE\",\n        \"city\": \"POMONA\",\n        \"state\": \"CA\"\n      },\n      \"spokenLanguage\": \"EN\",\n      \"taxReview\": {\n        \"primaryTaxFilerInd\": false,\n        \"plansToFileTaxReturn\": false,\n        \"expectedToFileTaxReturn\": false\n      },\n      \"taxStatus\": {\n        \"marriedFilingJointlyInd\": false,\n        \"marriedFilingSeperatelyInd\": false,\n        \"singleInd\": false,\n        \"headOfHouseholdInd\": false,\n        \"claimedAsOfDependentInd\": false,\n        \"nonTaxFilerInd\": false\n      },\n      \"assetNewInfo\": [\n        {\n          \"amount\": 15.01,\n          \"assetType\": \"Savings Account\"\n        },\n        {\n          \"amount\": 911.52,\n          \"assetType\": \"Checking Account\"\n        }\n      ]\n    },\n    {\n      \"dob\": 1484092800000,\n      \"cin\": \"70976060G\",\n      \"primaryApplicant\": \"N\",\n      \"Age\": 4,\n      \"genderCode\": \"MA\",\n      \"PersonalId\": 834374461,\n      \"firstName\": \"DESTINY\",\n      \"lastname\": \"RODERICK\",\n      \"DOB\": \"2017-01-11\",\n      \"homeless\": false,\n      \"mailingAddressIfDifferent\": {\n        \"addressLine\": \"20 BLUE JAY CIRCLE\",\n        \"city\": \"POMONA\",\n        \"state\": \"CA\"\n      },\n      \"spokenLanguage\": \"EN\",\n      \"taxReview\": {\n        \"primaryTaxFilerInd\": false,\n        \"plansToFileTaxReturn\": false,\n        \"expectedToFileTaxReturn\": false\n      },\n      \"taxStatus\": {\n        \"marriedFilingJointlyInd\": false,\n        \"marriedFilingSeperatelyInd\": false,\n        \"singleInd\": false,\n        \"headOfHouseholdInd\": false,\n        \"claimedAsOfDependentInd\": true,\n        \"nonTaxFilerInd\": false,\n        \"jointFilerPersonId\": \"1\"\n      }\n    },\n    {\n      \"dob\": 1608076800000,\n      \"cin\": \"35855890G\",\n      \"primaryApplicant\": \"N\",\n      \"Age\": 0,\n      \"genderCode\": \"FE\",\n      \"PersonalId\": 4000747704,\n      \"firstName\": \"DOMINGO\",\n      \"lastname\": \"RODERICK\",\n      \"DOB\": \"2020-12-16\",\n      \"homeless\": false,\n      \"mailingAddressIfDifferent\": {\n        \"addressLine\": \"20 BLUE JAY CIRCLE\",\n        \"city\": \"POMONA\",\n        \"state\": \"CA\"\n      },\n      \"spokenLanguage\": \"EN\",\n      \"taxReview\": {\n        \"primaryTaxFilerInd\": false,\n        \"plansToFileTaxReturn\": false,\n        \"expectedToFileTaxReturn\": false\n      },\n      \"taxStatus\": {\n        \"marriedFilingJointlyInd\": false,\n        \"marriedFilingSeperatelyInd\": false,\n        \"singleInd\": false,\n        \"headOfHouseholdInd\": false,\n        \"claimedAsOfDependentInd\": true,\n        \"nonTaxFilerInd\": false,\n        \"jointFilerPersonId\": \"1\"\n      }\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "https://dev2-api.dev.benefitscaldev.com/formstatus/postFormUpdate",
+					"protocol": "https",
+					"host": [
+						"dev2-api",
+						"dev",
+						"benefitscaldev",
+						"com"
+					],
+					"path": [
+						"formstatus",
+						"postFormUpdate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Form Status Update_DEV",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer wOn8nuwB56-Shx_3wfwHV5EPheE"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"caseNum\": \"K200395\",\n  \"caseName\": \"Nellie Justice\",\n  \"countyCode\": \"19\",\n  \"programList\": [\n    \"FS\"\n  ],\n  \"form\": {\n    \"formName\": \"SAR 7\",\n    \"formStatus\": \"SE\",\n    \"formIdentifier\": \"K20039500301120214205354567\",\n    \"formDueDate\": \"2021-12-20T00:00:00.000+0800\",\n    \"formReportType\": \"S7\"\n  },\n  \"periodReportStorage\": {\n    \"year\": 2021,\n    \"month\": 10,\n    \"ReportMonthName\": \"October\",\n    \"ReportType\": \"F30\",\n    \"Cycle\": \"00\"\n  },\n  \"teleTypeNumber\": \"(877) 597-4777\",\n  \"BeginDate\": \"2021-11-01T00:00:00.000+0700\",\n  \"EndDate\": \"2021-12-31T00:00:00.000+0800\",\n  \"CaseIndividuals\": [\n    {\n      \"primaryApplicant\": \"Y\",\n      \"firstName\": \"Nellie\",\n      \"cin\": \"283891134\",\n      \"homeless\": false,\n      \"homeAddress\": {\n        \"addressLine\": \"500 S MAIN ST\",\n        \"city\": \"LOS ANGELES\",\n        \"state\": \"CA\",\n        \"zipcode\": \"90013\"\n      },\n      \"genderCode\": \"FE\",\n      \"spokenLanguage\": \"03\",\n      \"dob\": \"1989-03-29\",\n      \"lastname\": \"Justice\",\n      \"DOB\": \"1989-03-29\",\n      \"PersonalId\": 4002693347,\n      \"Age\": 32\n    }\n  ],\n  \"WorkerName\": \"Domenic Ackart \",\n  \"WorkerPhone\": {\n    \"Number\": \"887-264-2352\"\n  },\n  \"OfficeNumber\": \"(866) 613-3777\",\n  \"MailbackAddressOffice\": {\n    \"addressLine\": \"11 PONDEROSA LANE\",\n    \"city\": \"EL MONTE\",\n    \"state\": \"CA\",\n    \"zipcode\": \"91731\"\n  },\n  \"MailingAddress\": {\n    \"addressLine\": \"500 S MAIN ST\",\n    \"city\": \"LOS ANGELES\",\n    \"state\": \"CA\",\n    \"zipcode\": \"90013\"\n  }\n}"
+				},
+				"url": {
+					"raw": "https://dev-api.dev.benefitscaldev.com/formstatus/postFormUpdate",
+					"protocol": "https",
+					"host": [
+						"dev-api",
+						"dev",
+						"benefitscaldev",
+						"com"
+					],
+					"path": [
+						"formstatus",
+						"postFormUpdate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Form Status Update_DEV1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer -xVwfJO0I0H3taHqyfntZaIuq9A"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"caseNum\": \"K200382\",\n    \"caseName\": \"Joan Rush\",\n    \"countyCode\": \"19\",\n    \"programList\": [\n        \"FS\"\n    ],\n    \"form\": {\n        \"formName\": \"CF RE Packet\",\n        \"formStatus\": \"SE\",\n        \"formIdentifier\": \"K20038200371120214205354531\",\n        \"formDueDate\": \"2021-11-30T00:00:00.000+0800\",\n        \"formReportType\": \"CF\"\n    },\n    \"periodReportStorage\": {\n        \"year\": 2021,\n        \"month\": 11,\n        \"ReportMonthName\": \"November\",\n        \"ReportType\": \"F37\",\n        \"Cycle\": \"00\"\n    },\n    \"teleTypeNumber\": \"(877) 597-4777\",\n    \"BeginDate\": \"2021-10-26T12:12:03.000+0700\",\n    \"EndDate\": \"2021-12-30T00:00:00.000+0800\",\n    \"CaseIndividuals\": [\n        {\n            \"primaryApplicant\": \"Y\",\n            \"firstName\": \"Joan\",\n            \"cin\": \"274920086\",\n            \"homeless\": false,\n            \"homeAddress\": {\n                \"addressLine\": \"900 S MAIN ST\",\n                \"city\": \"LOS ANGELES\",\n                \"state\": \"CA\",\n                \"zipcode\": \"90015\"\n            },\n            \"genderCode\": \"FE\",\n            \"spokenLanguage\": \"03\",\n            \"dob\": \"1975-01-01\",\n            \"lastname\": \"Rush\",\n            \"DOB\": \"1975-01-01\",\n            \"PersonalId\": 4002693330,\n            \"Age\": 46\n        },\n        {\n            \"primaryApplicant\": \"N\",\n            \"firstName\": \"George\",\n            \"cin\": \"274968262\",\n            \"homeless\": false,\n            \"homeAddress\": {\n                \"addressLine\": \"900 S MAIN ST\",\n                \"city\": \"LOS ANGELES\",\n                \"state\": \"CA\",\n                \"zipcode\": \"90015\"\n            },\n            \"genderCode\": \"MA\",\n            \"spokenLanguage\": \"03\",\n            \"dob\": \"1970-05-09\",\n            \"lastname\": \"Rush\",\n            \"DOB\": \"1970-05-09\",\n            \"PersonalId\": 4002693331,\n            \"Age\": 51\n        }\n    ],\n    \"WorkerName\": \"Leland Aberdeen \",\n    \"WorkerPhone\": {\n        \"Number\": \"887-264-5135\"\n    },\n    \"OfficeNumber\": \"(866) 613-3777\",\n    \"MailbackAddressOffice\": {\n        \"addressLine\": \"9451 CORBIN AVE STE 200\",\n        \"city\": \"NORTHRIDGE\",\n        \"state\": \"CA\",\n        \"zipcode\": \"91324\"\n    },\n    \"MailingAddress\": {\n        \"addressLine\": \"900 S MAIN ST\",\n        \"city\": \"LOS ANGELES\",\n        \"state\": \"CA\",\n        \"zipcode\": \"90015\"\n    }\n}"
+				},
+				"url": {
+					"raw": "https://dev1-api.dev.benefitscaldev.com/formstatus/postFormUpdate",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"dev",
+						"benefitscaldev",
+						"com"
+					],
+					"path": [
+						"formstatus",
+						"postFormUpdate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Form Status Update_UAT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer Ne9ejkdeYnCneidLi6Mom5eUHCY"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"caseNum\": \"B0QVB07\",\n  \"caseName\": \"Lori Rios\",\n  \"countyCode\": \"19\",\n  \"programList\": [\n    \"CW\",\n    \"FS\"\n  ],\n  \"BeginDate\": \"2021-08-01\",\n  \"EndDate\": \"2021-09-30\",\n  \"OfficeNumber\": \"GU\",\n  \"WorkerName\": \"Madelyn Cleaver \",\n  \"WorkerPhone\": {\n    \"Number\": \"507-407-6260\"\n  },\n  \"MailingAddress\": {\n    \"addressLine\": \"2202 LUCAYA BEND\",\n    \"city\": \"LOS ANGELES\",\n    \"state\": \"CA\"\n  },\n  \"MailbackAddressOffice\": {\n    \"addressLine\": \"139 EDWARD FOSTER ROAD\",\n    \"city\": \"PALMDALE\",\n    \"state\": \"CA\",\n    \"zipcode\": \"93550\"\n  },\n  \"form\": {\n    \"formName\": \"SAR 7\",\n    \"formStatus\": \"SE\",\n    \"formDueDate\": \"2022-02-28\",\n    \"formIdentifier\": \"B0QVB0700410320214081213207\",\n    \"formReportType\": \"S7\"\n  },\n  \"periodReportStorage\": {\n    \"year\": 2021,\n    \"month\": 7,\n    \"ReportMonthName\": \"July\",\n    \"ReportType\": \"F30\",\n    \"Cycle\": \"00\"\n  },\n  \"CaseIndividuals\": [\n    {\n      \"dob\": 640915200000,\n      \"cin\": \"330612091\",\n      \"primaryApplicant\": \"Y\",\n      \"Age\": 31,\n      \"genderCode\": \"MA\",\n      \"PersonalId\": 4001252749,\n      \"firstName\": \"Lori\",\n      \"lastname\": \"Rios\",\n      \"DOB\": \"1990-04-24\",\n      \"homeless\": false,\n      \"spokenLanguage\": \"EN\"\n    },\n    {\n      \"dob\": 640915200000,\n      \"cin\": \"330612091\",\n      \"primaryApplicant\": \"N\",\n      \"Age\": 31,\n      \"genderCode\": \"MA\",\n      \"PersonalId\": 4001252749,\n      \"firstName\": \"Lori\",\n      \"lastname\": \"Rios\",\n      \"DOB\": \"1990-04-24\",\n      \"homeless\": false,\n      \"spokenLanguage\": \"EN\"\n    },\n    {\n      \"dob\": 1277251200000,\n      \"cin\": \"330617223\",\n      \"primaryApplicant\": \"N\",\n      \"Age\": 11,\n      \"genderCode\": \"FE\",\n      \"PersonalId\": 4001252750,\n      \"firstName\": \"Therese\",\n      \"lastname\": \"Bullock\",\n      \"DOB\": \"2010-06-23\",\n      \"homeless\": false,\n      \"spokenLanguage\": \"EN\"\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "https://uat-api.uat.benefitscaldev.com/formstatus/postFormUpdate",
+					"protocol": "https",
+					"host": [
+						"uat-api",
+						"uat",
+						"benefitscaldev",
+						"com"
+					],
+					"path": [
+						"formstatus",
+						"postFormUpdate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Form Status Update_UAT2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer 7lp78NuTpzY-dTxMnM6TXqLpMvM"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"caseNum\": \"K200374\",\n  \"caseName\": \"Jeanie Fuller\",\n  \"countyCode\": \"19\",\n  \"programList\": [\n    \"CW\"\n  ],\n  \"form\": {\n    \"formName\": \"CW RE Packet\",\n    \"formStatus\": \"SE\",\n    \"formIdentifier\": \"K20037400381120214205354484\",\n    \"formDueDate\": \"2021-11-30T00:00:00.000+0800\",\n    \"formReportType\": \"CW\"\n  },\n  \"periodReportStorage\": {\n    \"year\": 2021,\n    \"month\": 11,\n    \"ReportMonthName\": \"November\",\n    \"ReportType\": \"F38\",\n    \"Cycle\": \"00\"\n  },\n  \"teleTypeNumber\": \"(877) 597-4777\",\n  \"BeginDate\": \"2021-10-26T09:59:37.000+0700\",\n  \"EndDate\": \"2021-12-31T00:00:00.000+0800\",\n  \"CaseIndividuals\": [\n    {\n      \"primaryApplicant\": \"Y\",\n      \"firstName\": \"Jeanie\",\n      \"cin\": \"266826908\",\n      \"homeless\": false,\n      \"homeAddress\": {\n        \"addressLine\": \"100 S MAIN ST\",\n        \"city\": \"LOS ANGELES\",\n        \"state\": \"CA\",\n        \"zipcode\": \"90012\"\n      },\n      \"genderCode\": \"FE\",\n      \"spokenLanguage\": \"EN\",\n      \"mailingAddressIfDifferent\": {\n        \n      },\n      \"ssn\": \"159011820\",\n      \"applyAidInd\": true,\n      \"applySSNInd\": false,\n      \"citizenship\": {\n        \"sponsored\": false\n      },\n      \"maritalStatusCode\": \"NM\",\n      \"vitalStatistics\": {\n        \"caResidentInd\": false,\n        \"intentToResideInd\": false,\n        \"aresidentInd\": false\n      },\n      \"lastname\": \"Fuller\",\n      \"DOB\": \"2000-01-01T00:00:00.000+0800\",\n      \"PersonalId\": 4002693313,\n      \"ChildHouseholdInfoDetails\": {\n        \"placeOfBirth\": \"US\"\n      },\n      \"EthRace\": {\n        \"ethnicity\": {\n          \"hispLatSpanish\": true\n        },\n        \"raceEthnicOrigins\": {\n          \"white\": false,\n          \"americanIndianAlaskan\": false,\n          \"blackAA\": false,\n          \"otherOrMixed\": true,\n          \"otherOrMixedExpl\": \"Mexican\"\n        }\n      },\n      \"houseHoldHeadInd\": true\n    },\n    {\n      \"primaryApplicant\": \"N\",\n      \"firstName\": \"Julie\",\n      \"cin\": \"266871549\",\n      \"homeless\": false,\n      \"homeAddress\": {\n        \"addressLine\": \"100 S MAIN ST\",\n        \"city\": \"LOS ANGELES\",\n        \"state\": \"CA\",\n        \"zipcode\": \"90012\"\n      },\n      \"genderCode\": \"FE\",\n      \"spokenLanguage\": \"03\",\n      \"dob\": \"2020-01-01\",\n      \"lastname\": \"Fuller\",\n      \"DOB\": \"2020-01-01\",\n      \"PersonalId\": 4002693314,\n      \"Age\": 1\n    }\n  ],\n  \"WorkerName\": \"Leland Aberdeen \",\n  \"WorkerPhone\": {\n    \"Number\": \"887-264-5135\"\n  },\n  \"OfficeNumber\": \"(866) 613-3777\",\n  \"MailbackAddressOffice\": {\n    \"addressLine\": \"9451 CORBIN AVE STE 200\",\n    \"city\": \"NORTHRIDGE\",\n    \"state\": \"CA\",\n    \"zipcode\": \"91324\"\n  },\n  \"MailingAddress\": {\n    \"addressLine\": \"100 S MAIN ST\",\n    \"city\": \"LOS ANGELES\",\n    \"state\": \"CA\",\n    \"zipcode\": \"90012\"\n  }\n}"
+				},
+				"url": {
+					"raw": "https://uat1-api.uat.benefitscaldev.com/formstatus/postFormUpdate",
+					"protocol": "https",
+					"host": [
+						"uat1-api",
+						"uat",
+						"benefitscaldev",
+						"com"
+					],
+					"path": [
+						"formstatus",
+						"postFormUpdate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Form Status Update_PREF",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer u_OCSkOEDc5wNvQQQ8u2t9coiNo"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"caseNum\": \"K200374\",\n  \"caseName\": \"Jeanie Fuller\",\n  \"countyCode\": \"19\",\n  \"programList\": [\n    \"CW\"\n  ],\n  \"form\": {\n    \"formName\": \"CW RE Packet\",\n    \"formStatus\": \"SE\",\n    \"formIdentifier\": \"K20037400381120214205354484\",\n    \"formDueDate\": \"2021-11-30T00:00:00.000+0800\",\n    \"formReportType\": \"CW\"\n  },\n  \"periodReportStorage\": {\n    \"year\": 2021,\n    \"month\": 11,\n    \"ReportMonthName\": \"November\",\n    \"ReportType\": \"F38\",\n    \"Cycle\": \"00\"\n  },\n  \"teleTypeNumber\": \"(877) 597-4777\",\n  \"BeginDate\": \"2021-10-26T09:59:37.000+0700\",\n  \"EndDate\": \"2021-12-31T00:00:00.000+0800\",\n  \"CaseIndividuals\": [\n    {\n      \"primaryApplicant\": \"Y\",\n      \"firstName\": \"Jeanie\",\n      \"cin\": \"266826908\",\n      \"homeless\": false,\n      \"homeAddress\": {\n        \"addressLine\": \"100 S MAIN ST\",\n        \"city\": \"LOS ANGELES\",\n        \"state\": \"CA\",\n        \"zipcode\": \"90012\"\n      },\n      \"genderCode\": \"FE\",\n      \"spokenLanguage\": \"EN\",\n      \"mailingAddressIfDifferent\": {\n        \n      },\n      \"ssn\": \"159011820\",\n      \"applyAidInd\": true,\n      \"applySSNInd\": false,\n      \"citizenship\": {\n        \"sponsored\": false\n      },\n      \"maritalStatusCode\": \"NM\",\n      \"vitalStatistics\": {\n        \"caResidentInd\": false,\n        \"intentToResideInd\": false,\n        \"aresidentInd\": false\n      },\n      \"lastname\": \"Fuller\",\n      \"DOB\": \"2000-01-01T00:00:00.000+0800\",\n      \"PersonalId\": 4002693313,\n      \"ChildHouseholdInfoDetails\": {\n        \"placeOfBirth\": \"US\"\n      },\n      \"EthRace\": {\n        \"ethnicity\": {\n          \"hispLatSpanish\": true\n        },\n        \"raceEthnicOrigins\": {\n          \"white\": false,\n          \"americanIndianAlaskan\": false,\n          \"blackAA\": false,\n          \"otherOrMixed\": true,\n          \"otherOrMixedExpl\": \"Mexican\"\n        }\n      },\n      \"houseHoldHeadInd\": true\n    },\n    {\n      \"primaryApplicant\": \"N\",\n      \"firstName\": \"Julie\",\n      \"cin\": \"266871549\",\n      \"homeless\": false,\n      \"homeAddress\": {\n        \"addressLine\": \"100 S MAIN ST\",\n        \"city\": \"LOS ANGELES\",\n        \"state\": \"CA\",\n        \"zipcode\": \"90012\"\n      },\n      \"genderCode\": \"FE\",\n      \"spokenLanguage\": \"03\",\n      \"dob\": \"2020-01-01\",\n      \"lastname\": \"Fuller\",\n      \"DOB\": \"2020-01-01\",\n      \"PersonalId\": 4002693314,\n      \"Age\": 1\n    }\n  ],\n  \"WorkerName\": \"Leland Aberdeen \",\n  \"WorkerPhone\": {\n    \"Number\": \"887-264-5135\"\n  },\n  \"OfficeNumber\": \"(866) 613-3777\",\n  \"MailbackAddressOffice\": {\n    \"addressLine\": \"9451 CORBIN AVE STE 200\",\n    \"city\": \"NORTHRIDGE\",\n    \"state\": \"CA\",\n    \"zipcode\": \"91324\"\n  },\n  \"MailingAddress\": {\n    \"addressLine\": \"100 S MAIN ST\",\n    \"city\": \"LOS ANGELES\",\n    \"state\": \"CA\",\n    \"zipcode\": \"90012\"\n  }\n}"
+				},
+				"url": {
+					"raw": "https://perf-api.perf.benefitscaldev.com/formstatus/postFormUpdate",
+					"protocol": "https",
+					"host": [
+						"perf-api",
+						"perf",
+						"benefitscaldev",
+						"com"
+					],
+					"path": [
+						"formstatus",
+						"postFormUpdate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Text API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 5lH22-bcKJ7jY26Nr7bCBq8CdTc"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fromNumber\": \"7174006472\",\n    \"toNumber\": \"6124050936\",\n    \"message\": \"Please let Niranjan/Pratik/Vamshi know that you got this text from id-dev(API Call)\"\n}"
+				},
+				"url": {
+					"raw": "https://csys1.api-test.calsaws.net/texting-service/v1/texting/sms-message",
+					"protocol": "https",
+					"host": [
+						"csys1",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"texting-service",
+						"v1",
+						"texting",
+						"sms-message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Email API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer cV5bdzSXnhyXanfB6z0ewMYOYJo"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"to\": [\n        \"koriviv@mailinator.com\"\n    ],\n    \"from\": \"koriviv@calsaws.org\",\n    \"subject\": \"test\",\n    \"body\": \"<html><head>Test Email Header</head><body>Test Email Body</body></html>\",\n    \"htmlText\": true\n}\n\n"
+				},
+				"url": {
+					"raw": "https://csit.api-test.calsaws.net/email/send",
+					"protocol": "https",
+					"host": [
+						"csit",
+						"api-test",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"email",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer n-Gt9kQ6HpOq4eVFJDnnXosj-e0"
+					},
+					{
+						"key": "Content-Transfer-Encoding",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"narend15\",\r\n    \"mail\": \"adminbcal1@mailinator.com\",\r\n    \"givenName\": \"narendran\",\r\n    \"sn\": \"Admin\",\r\n    \"county\": \"19\",\r\n    \"organizationIdentifier\": \"ade9b28d-31aa-48cf-94c4-8ba1c5c107f9\",\r\n    \"userType\": \"CBO\"\r\n}"
+				},
+				"url": {
+					"raw": "https://id-dev.calsaws.net:443/identity/managed/user?_action=create",
+					"protocol": "https",
+					"host": [
+						"id-dev",
+						"calsaws",
+						"net"
+					],
+					"port": "443",
+					"path": [
+						"identity",
+						"managed",
+						"user"
+					],
+					"query": [
+						{
+							"key": "_action",
+							"value": "create"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create CBO Manager",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eCRK7ANJ_7HJzi_LrrwQYFwx1Ms"
+					},
+					{
+						"key": "Content-Transfer-Encoding",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"na78re78cbo10\",\n    \"mail\": \"CBOM10thnov@mailinator.com\",\n    \"givenName\": \"narendran\",\n    \"sn\": \"Manager\",\n    \"county\": \"19\",\n    \"organizationIdentifier\": \"44e6a6f3-707d-44a6-9b10-cddb4fba7676\",\n    \"userType\": \"CBO\"\n}"
+				},
+				"url": {
+					"raw": "https://id-dev.calsaws.net:443/identity/managed/user?_action=create",
+					"protocol": "https",
+					"host": [
+						"id-dev",
+						"calsaws",
+						"net"
+					],
+					"port": "443",
+					"path": [
+						"identity",
+						"managed",
+						"user"
+					],
+					"query": [
+						{
+							"key": "_action",
+							"value": "create"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create CBO Manager Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer d6janP3ydyGGphbA_-lh62ZaYuU"
+					},
+					{
+						"key": "Content-Transfer-Encoding",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"na8078re78cbo10\",\n    \"mail\": \"CBOM11thnov@mailinator.com\",\n    \"givenName\": \"narendran\",\n    \"sn\": \"Manager\",\n    \"county\": \"19\",\n    \"organizationIdentifier\": \"082b74c1-81ce-4710-8a0f-8836f7bfea13\",\n    \"userType\": \"CBO\"\n}"
+				},
+				"url": {
+					"raw": "https://id-dev.calsaws.net:443/identity/managed/user?_action=create",
+					"protocol": "https",
+					"host": [
+						"id-dev",
+						"calsaws",
+						"net"
+					],
+					"port": "443",
+					"path": [
+						"identity",
+						"managed",
+						"user"
+					],
+					"query": [
+						{
+							"key": "_action",
+							"value": "create"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign CBO Manager Role",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer d6janP3ydyGGphbA_-lh62ZaYuU"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"operation\": \"add\",\n        \"field\": \"/roles/-\",\n        \"value\": {\"_ref\" : \"managed/role/44a20ea1-c768-4d74-8fbc-ca9c3b179a36\"}\n    }\n]"
+				},
+				"url": {
+					"raw": "https://id-dev.calsaws.net:443/identity/managed/user/c0bed09f-2085-4b65-984c-b49c4a9cf341",
+					"protocol": "https",
+					"host": [
+						"id-dev",
+						"calsaws",
+						"net"
+					],
+					"port": "443",
+					"path": [
+						"identity",
+						"managed",
+						"user",
+						"c0bed09f-2085-4b65-984c-b49c4a9cf341"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign Admin Role",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer FPGjt9NcToTLlCNUTH1oxu8U0Vw"
+					},
+					{
+						"key": "Cookie",
+						"value": "AWSALB=EL1zbkUeuBZo/9pZjTkuPvGC6Zw5ZTu5Z3I68YqfWcxkoIm7q6rdVVgsv1+6PJcpkNKo9gCHP4GVUGYamBa/p0kTdOi1JX982DWsy5GTych/otBFKQXw7LY6yHSx; AWSALBCORS=EL1zbkUeuBZo/9pZjTkuPvGC6Zw5ZTu5Z3I68YqfWcxkoIm7q6rdVVgsv1+6PJcpkNKo9gCHP4GVUGYamBa/p0kTdOi1JX982DWsy5GTych/otBFKQXw7LY6yHSx",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"operation\": \"add\",\n        \"field\": \"/roles/-\",\n        \"value\": {\"_ref\" : \"managed/role/ade9b28d-31aa-48cf-94c4-8ba1c5c107f9\"}\n    }\n]"
+				},
+				"url": {
+					"raw": "https://id-dev.calsaws.net:443/identity/managed/user/fadbd17f-7bcd-42e7-805f-0e6a3b4f1eae",
+					"protocol": "https",
+					"host": [
+						"id-dev",
+						"calsaws",
+						"net"
+					],
+					"port": "443",
+					"path": [
+						"identity",
+						"managed",
+						"user",
+						"fadbd17f-7bcd-42e7-805f-0e6a3b4f1eae"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign CBO Assister Role",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer BE6Mrswr7rRvXVf1ViHwCRN5SZw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"operation\": \"add\",\n        \"field\": \"/roles/-\",\n        \"value\": {\"_ref\" : \"managed/role/5e18aaac-885c-42ca-8c44-ac502c7e6be6\"}\n    }\n]"
+				},
+				"url": {
+					"raw": "https://id-dev.calsaws.net:443/identity/managed/user/ecb863be-bc2c-4401-8ba8-5b68110f06b2",
+					"protocol": "https",
+					"host": [
+						"id-dev",
+						"calsaws",
+						"net"
+					],
+					"port": "443",
+					"path": [
+						"identity",
+						"managed",
+						"user",
+						"ecb863be-bc2c-4401-8ba8-5b68110f06b2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create CBO Assister",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer BE6Mrswr7rRvXVf1ViHwCRN5SZw"
+					},
+					{
+						"key": "Content-Transfer-Encoding",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n    \"mail\": \"pratcbo2@mailinator.com\",\n    \"givenName\": \"pratcbo2\",\n    \"sn\": \"pratcbo2\",\n    \"phoneNumber\": \"5137416530\",\n    \"organizationIdentifier\": \"44e6a6f3-707d-44a6-9b10-cddb4fba7676\",\n    \"userType\": \"CBO\"\n}"
+				},
+				"url": {
+					"raw": "https://id-dev.calsaws.net:443/identity/managed/user?_action=create",
+					"protocol": "https",
+					"host": [
+						"id-dev",
+						"calsaws",
+						"net"
+					],
+					"port": "443",
+					"path": [
+						"identity",
+						"managed",
+						"user"
+					],
+					"query": [
+						{
+							"key": "_action",
+							"value": "create"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dev Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "f12FG132rnAF3fd",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "fobvfv-GF!fa",
+							"type": "text"
+						},
+						{
+							"key": "token_endpoint_auth_method",
+							"value": "client_secret_post",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://id-dev.calsaws.net:443/auth/oauth2/realms/root/realms/calsaws/access_token",
+					"protocol": "https",
+					"host": [
+						"id-dev",
+						"calsaws",
+						"net"
+					],
+					"port": "443",
+					"path": [
+						"auth",
+						"oauth2",
+						"realms",
+						"root",
+						"realms",
+						"calsaws",
+						"access_token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update password",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 02Z6VKBUdfmuAh6FU9JIVf-p8po"
+					},
+					{
+						"key": "Cookie",
+						"value": "AWSALB=Z8USXjvrOrzzzsV+3jOLh3xA5UxZSzog+VFFOGqiJ7r2edSjZAJQK1sJ1vJIvmryoM2sgsSaamlJaua+dTopOfJflXZnAEy43QIsjc9djnv1nSDiez/+n16MPl3M; AWSALBCORS=Z8USXjvrOrzzzsV+3jOLh3xA5UxZSzog+VFFOGqiJ7r2edSjZAJQK1sJ1vJIvmryoM2sgsSaamlJaua+dTopOfJflXZnAEy43QIsjc9djnv1nSDiez/+n16MPl3M; BCSI-CS-dff86568b29e8b4b=1"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"operation\": \"add\",\n        \"field\": \"/roles/-\",\n        \"value\": {\"_ref\" : \"managed/role/CBO Assistor\"}\n    }\n]"
+				},
+				"url": {
+					"raw": "https://id-dev.calsaws.net:443/identity/managed/user/d042326f-dc5a-4362-a45d-03a1dbf275b1",
+					"protocol": "https",
+					"host": [
+						"id-dev",
+						"calsaws",
+						"net"
+					],
+					"port": "443",
+					"path": [
+						"identity",
+						"managed",
+						"user",
+						"d042326f-dc5a-4362-a45d-03a1dbf275b1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AssisterAccountEmailVerificationPasswordUpdateEmail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authority",
+						"value": "dev1-app.dev.benefitscaldev.com"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\" Not;A Brand\";v=\"99\", \"Microsoft Edge\";v=\"91\", \"Chromium\";v=\"91\""
+					},
+					{
+						"key": "accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36 Edg/91.0.864.59"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "referer",
+						"value": "https://dev1-app.dev.benefitscaldev.com/AccountManagement/AMFSPA/?code=ZGZjNGI0MWYtNDM4Yy00NzAzLWEyOWItNWRiY2E1MjVhMDBj"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-US,en;q=0.9"
+					},
+					{
+						"key": "cookie",
+						"value": "_ga=GA1.1.1331289077.1624815737; _ga_NB07C0ZPZ3=GS1.1.1624815737.1.1.1624817591.0"
+					},
+					{
+						"key": "Content-Type",
+						"value": "applicati",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer -EKc1_zUpBxY1Iuk1EjrFbPPcFY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://id-dev.calsaws.net/identity/endpoint/validatelink?code=ZGZjNGI0MWYtNDM4Yy00NzAzLWEyOWItNWRiY2E1MjVhMDBj",
+					"protocol": "https",
+					"host": [
+						"id-dev",
+						"calsaws",
+						"net"
+					],
+					"path": [
+						"identity",
+						"endpoint",
+						"validatelink"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "ZGZjNGI0MWYtNDM4Yy00NzAzLWEyOWItNWRiY2E1MjVhMDBj"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "legacy login create account",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 1ESA2uIW5ENCdcXw2Ny8qtFVLMU"
+					},
+					{
+						"key": "Content-Transfer-Encoding",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"value": "AWSALB=Ni+fTKPXQro7HP++G7/gKUd2A/CE8OfjRH+Zg8XHBv9zdO3xoLsPEpRkRi5C6wRK9IVhpDkXMPlwuJb11r5pJ3NbFaWjCBaN4PvZmzEHM8AmwNmV5LZc0FzTqZQY; AWSALBCORS=Ni+fTKPXQro7HP++G7/gKUd2A/CE8OfjRH+Zg8XHBv9zdO3xoLsPEpRkRi5C6wRK9IVhpDkXMPlwuJb11r5pJ3NbFaWjCBaN4PvZmzEHM8AmwNmV5LZc0FzTqZQY; AWSALB=RVXGFrR6Fjhcrj9kCAvSXJMz4Ishn8JAwZVysK3Odwapu0uAbIVMs4tO5dUbTY8dS1jG74cM+TW4m2djt3HA2Em6JcuBYJgFNQH/6tN+XJ9+xfUMuXeFPXpkPJHC; AWSALBCORS=RVXGFrR6Fjhcrj9kCAvSXJMz4Ishn8JAwZVysK3Odwapu0uAbIVMs4tO5dUbTY8dS1jG74cM+TW4m2djt3HA2Em6JcuBYJgFNQH/6tN+XJ9+xfUMuXeFPXpkPJHC"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"testsit32\",\n    \"mail\": \"sitc4y32@mailinator.com\",\n    \"givenName\": \"test\",\n    \"sn\": \"test\",\n    \"county\": \"19\",\n    \"password\": \"test1234!\"\n}"
+				},
+				"url": {
+					"raw": "https://id-dev.calsaws.net:443/identity/managed/customer?_action=create",
+					"protocol": "https",
+					"host": [
+						"id-dev",
+						"calsaws",
+						"net"
+					],
+					"port": "443",
+					"path": [
+						"identity",
+						"managed",
+						"customer"
+					],
+					"query": [
+						{
+							"key": "_action",
+							"value": "create"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "legacy login create account Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer UQbxGvkAzjqChzkeFIpqq7nk8Qw"
+					},
+					{
+						"key": "Content-Transfer-Encoding",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"value": "AWSALB=Ni+fTKPXQro7HP++G7/gKUd2A/CE8OfjRH+Zg8XHBv9zdO3xoLsPEpRkRi5C6wRK9IVhpDkXMPlwuJb11r5pJ3NbFaWjCBaN4PvZmzEHM8AmwNmV5LZc0FzTqZQY; AWSALBCORS=Ni+fTKPXQro7HP++G7/gKUd2A/CE8OfjRH+Zg8XHBv9zdO3xoLsPEpRkRi5C6wRK9IVhpDkXMPlwuJb11r5pJ3NbFaWjCBaN4PvZmzEHM8AmwNmV5LZc0FzTqZQY; AWSALB=RVXGFrR6Fjhcrj9kCAvSXJMz4Ishn8JAwZVysK3Odwapu0uAbIVMs4tO5dUbTY8dS1jG74cM+TW4m2djt3HA2Em6JcuBYJgFNQH/6tN+XJ9+xfUMuXeFPXpkPJHC; AWSALBCORS=RVXGFrR6Fjhcrj9kCAvSXJMz4Ishn8JAwZVysK3Odwapu0uAbIVMs4tO5dUbTY8dS1jG74cM+TW4m2djt3HA2Em6JcuBYJgFNQH/6tN+XJ9+xfUMuXeFPXpkPJHC"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"testwer34\",\n    \"mail\": \"intc4y123456@mailinator.com\",\n    \"givenName\": \"test\",\n    \"sn\": \"test\",\n    \"county\": \"19\",\n    \"password\": \"test1234!\"\n}"
+				},
+				"url": {
+					"raw": "https://id-ad.calsaws.net:443/identity/managed/customer?_action=create",
+					"protocol": "https",
+					"host": [
+						"id-ad",
+						"calsaws",
+						"net"
+					],
+					"port": "443",
+					"path": [
+						"identity",
+						"managed",
+						"customer"
+					],
+					"query": [
+						{
+							"key": "_action",
+							"value": "create"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
